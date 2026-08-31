@@ -47,6 +47,10 @@ npx playwright test
 
 ## Note on scope
 
-These are the generated test files as executed for the pilot; they are not a maintained
-test-automation framework. The planned full-scale study (fine-tuned retriever vs. non-fine-tuned
-baseline, controlled injected defects) is tracked separately.
+This repository contains the generated test suites as executed for the pilot, not a
+generation pipeline or software framework — there is no retriever, agent, or application
+source code here. The pilot's tests were produced by prompting a locally hosted LLM directly
+with the retrieved context for each condition, not by a packaged tool. The retriever +
+generation agent described in the paper's Methodology as the target architecture belongs to
+the planned full-scale study (fine-tuned retriever vs. non-fine-tuned baseline, controlled
+injected defects), which is tracked separately and not part of this repository.
