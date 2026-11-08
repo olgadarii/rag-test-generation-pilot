@@ -1,0 +1,26 @@
+SyntaxError: /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/C_auto/run2/gen.spec.ts: Invalid regular expression flag. (12:38)
+
+  10 |     await page.fill('#password', 'EinBelegtesBrotMitSchinkenSCHINKEN!')
+  11 |     await page.click('#loginButton')
+> 12 |     await expect(page).toHaveURL(/#/dashboard/)
+     |                                       ^
+  13 |   })
+  14 |
+  15 |   test('invalid credentials should not log in', async ({ page }) => {
+
+   at results_v2/login/C_auto/run2/gen.spec.ts:12
+
+  10 |     await page.fill('#password', 'EinBelegtesBrotMitSchinkenSCHINKEN!')
+  11 |     await page.click('#loginButton')
+> 12 |     await expect(page).toHaveURL(/#/dashboard/)
+     |                                      ^
+  13 |   })
+  14 |
+  15 |   test('invalid credentials should not log in', async ({ page }) => {
+    at eval (<anonymous>:1:1)
+
+Error: No tests found.
+Make sure that arguments are regular expressions matching test files.
+You may need to escape symbols like "$" or "*" and quote the arguments.
+
+

@@ -1,0 +1,665 @@
+
+Running 15 tests using 1 worker
+
+[1/15] results_v2/login/B_oracle/run3/gen.spec.ts:9:5 › /#/login › challenge "loginAdminChallenge" › should log in Admin with SQLI attack on email field using "' or 1=1--"
+  1) results_v2/login/B_oracle/run3/gen.spec.ts:9:5 › /#/login › challenge "loginAdminChallenge" › should log in Admin with SQLI attack on email field using "' or 1=1--" 
+
+    TimeoutError: page.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#loginButton')
+        - locator resolved to <button type="submit" color="primary" id="loginButton" aria-label="Login" mat-raised-button="" _ngcontent-ng-c347502026="" mat-ripple-loader-uninitialized="" mat-ripple-loader-class-name="mat-mdc-button-ripple" class="mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        19 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+
+
+      10 |       await page.type('#email', "' or 1=1--");
+      11 |       await page.type('#password', 'a');
+    > 12 |       await page.click('#loginButton');
+         |                  ^
+      13 |     });
+      14 |
+      15 |     test('should log in Admin with SQLI attack on email field using "admin@<juice-sh.op>\'--"', async ({ page }) => {
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_oracle/run3/gen.spec.ts:12:18
+
+    Error Context: test-results/results_v2-login-B_oracle--26cff-email-field-using-or-1-1---/error-context.md
+
+
+[2/15] results_v2/login/B_oracle/run3/gen.spec.ts:15:5 › /#/login › challenge "loginAdminChallenge" › should log in Admin with SQLI attack on email field using "admin@<juice-sh.op>'--"
+  2) results_v2/login/B_oracle/run3/gen.spec.ts:15:5 › /#/login › challenge "loginAdminChallenge" › should log in Admin with SQLI attack on email field using "admin@<juice-sh.op>'--" 
+
+    TimeoutError: page.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#loginButton')
+        - locator resolved to <button type="submit" color="primary" id="loginButton" aria-label="Login" mat-raised-button="" _ngcontent-ng-c347502026="" mat-ripple-loader-uninitialized="" mat-ripple-loader-class-name="mat-mdc-button-ripple" class="mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        19 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+
+
+      17 |       await page.type('#email', `admin@${domain}'--`);
+      18 |       await page.type('#password', 'a');
+    > 19 |       await page.click('#loginButton');
+         |                  ^
+      20 |     });
+      21 |   });
+      22 |
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_oracle/run3/gen.spec.ts:19:18
+
+    Error Context: test-results/results_v2-login-B_oracle--0cda0-using-admin-juice-sh-op----/error-context.md
+
+
+[3/15] results_v2/login/B_oracle/run3/gen.spec.ts:24:5 › /#/login › challenge "loginJimChallenge" › should log in Jim with SQLI attack on email field using "jim@<juice-sh.op>'--"
+  3) results_v2/login/B_oracle/run3/gen.spec.ts:24:5 › /#/login › challenge "loginJimChallenge" › should log in Jim with SQLI attack on email field using "jim@<juice-sh.op>'--" 
+
+    TimeoutError: page.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#loginButton')
+        - locator resolved to <button type="submit" color="primary" id="loginButton" aria-label="Login" mat-raised-button="" _ngcontent-ng-c347502026="" mat-ripple-loader-uninitialized="" mat-ripple-loader-class-name="mat-mdc-button-ripple" class="mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        19 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+
+
+      26 |       await page.type('#email', `jim@${domain}'--`);
+      27 |       await page.type('#password', 'a');
+    > 28 |       await page.click('#loginButton');
+         |                  ^
+      29 |     });
+      30 |   });
+      31 |
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_oracle/run3/gen.spec.ts:28:18
+
+    Error Context: test-results/results_v2-login-B_oracle--5d88c-d-using-jim-juice-sh-op----/error-context.md
+
+
+[4/15] results_v2/login/B_oracle/run3/gen.spec.ts:33:5 › /#/login › challenge "loginBenderChallenge" › should log in Bender with SQLI attack on email field using "bender@<juice-sh.op>'--"
+  4) results_v2/login/B_oracle/run3/gen.spec.ts:33:5 › /#/login › challenge "loginBenderChallenge" › should log in Bender with SQLI attack on email field using "bender@<juice-sh.op>'--" 
+
+    TimeoutError: page.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#loginButton')
+        - locator resolved to <button type="submit" color="primary" id="loginButton" aria-label="Login" mat-raised-button="" _ngcontent-ng-c347502026="" mat-ripple-loader-uninitialized="" mat-ripple-loader-class-name="mat-mdc-button-ripple" class="mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        19 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+
+
+      35 |       await page.type('#email', `bender@${domain}'--`);
+      36 |       await page.type('#password', 'a');
+    > 37 |       await page.click('#loginButton');
+         |                  ^
+      38 |     });
+      39 |   });
+      40 |
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_oracle/run3/gen.spec.ts:37:18
+
+    Error Context: test-results/results_v2-login-B_oracle--42249-sing-bender-juice-sh-op----/error-context.md
+
+
+[5/15] results_v2/login/B_oracle/run3/gen.spec.ts:42:5 › /#/login › challenge "weakPasswordChallenge" › should be able to log in with original (weak) admin credentials
+  5) results_v2/login/B_oracle/run3/gen.spec.ts:42:5 › /#/login › challenge "weakPasswordChallenge" › should be able to log in with original (weak) admin credentials 
+
+    TimeoutError: page.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#loginButton')
+        - locator resolved to <button type="submit" color="primary" id="loginButton" aria-label="Login" mat-raised-button="" _ngcontent-ng-c347502026="" mat-ripple-loader-uninitialized="" mat-ripple-loader-class-name="mat-mdc-button-ripple" class="mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        19 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+
+
+      44 |       await page.type('#email', `admin@${domain}`);
+      45 |       await page.type('#password', 'admin123');
+    > 46 |       await page.click('#loginButton');
+         |                  ^
+      47 |     });
+      48 |   });
+      49 |
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_oracle/run3/gen.spec.ts:46:18
+
+    Error Context: test-results/results_v2-login-B_oracle--c7a17-inal-weak-admin-credentials/error-context.md
+
+
+[6/15] results_v2/login/B_oracle/run3/gen.spec.ts:51:5 › /#/login › challenge "loginSupportChallenge" › should be able to log in with original support-team credentials
+  6) results_v2/login/B_oracle/run3/gen.spec.ts:51:5 › /#/login › challenge "loginSupportChallenge" › should be able to log in with original support-team credentials 
+
+    TimeoutError: page.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#loginButton')
+        - locator resolved to <button type="submit" color="primary" id="loginButton" aria-label="Login" mat-raised-button="" _ngcontent-ng-c347502026="" mat-ripple-loader-uninitialized="" mat-ripple-loader-class-name="mat-mdc-button-ripple" class="mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        19 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+
+
+      53 |       await page.type('#email', `support@${domain}`);
+      54 |       await page.type('#password', 'J6aVjTgOpRs@?5l!Zkq2AYnCE@RF$P');
+    > 55 |       await page.click('#loginButton');
+         |                  ^
+      56 |     });
+      57 |   });
+      58 |
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_oracle/run3/gen.spec.ts:55:18
+
+    Error Context: test-results/results_v2-login-B_oracle--bbdb3-al-support-team-credentials/error-context.md
+
+
+[7/15] results_v2/login/B_oracle/run3/gen.spec.ts:60:5 › /#/login › challenge "loginRapperChallenge" › should be able to log in with original MC SafeSearch credentials
+  7) results_v2/login/B_oracle/run3/gen.spec.ts:60:5 › /#/login › challenge "loginRapperChallenge" › should be able to log in with original MC SafeSearch credentials 
+
+    TimeoutError: page.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#loginButton')
+        - locator resolved to <button type="submit" color="primary" id="loginButton" aria-label="Login" mat-raised-button="" _ngcontent-ng-c347502026="" mat-ripple-loader-uninitialized="" mat-ripple-loader-class-name="mat-mdc-button-ripple" class="mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        19 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+
+
+      62 |       await page.type('#email', `mc.safesearch@${domain}`);
+      63 |       await page.type('#password', 'Mr. N00dles');
+    > 64 |       await page.click('#loginButton');
+         |                  ^
+      65 |     });
+      66 |   });
+      67 |
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_oracle/run3/gen.spec.ts:64:18
+
+    Error Context: test-results/results_v2-login-B_oracle--55cf5-l-MC-SafeSearch-credentials/error-context.md
+
+
+[8/15] results_v2/login/B_oracle/run3/gen.spec.ts:69:5 › /#/login › challenge "loginAmyChallenge" › should be able to log in with original Amy credentials
+  8) results_v2/login/B_oracle/run3/gen.spec.ts:69:5 › /#/login › challenge "loginAmyChallenge" › should be able to log in with original Amy credentials 
+
+    TimeoutError: page.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#loginButton')
+        - locator resolved to <button type="submit" color="primary" id="loginButton" aria-label="Login" mat-raised-button="" _ngcontent-ng-c347502026="" mat-ripple-loader-uninitialized="" mat-ripple-loader-class-name="mat-mdc-button-ripple" class="mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        19 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+
+
+      71 |       await page.type('#email', `amy@${domain}`);
+      72 |       await page.type('#password', 'K1f.....................');
+    > 73 |       await page.click('#loginButton');
+         |                  ^
+      74 |     });
+      75 |   });
+      76 |
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_oracle/run3/gen.spec.ts:73:18
+
+    Error Context: test-results/results_v2-login-B_oracle--85238-th-original-Amy-credentials/error-context.md
+
+
+[9/15] results_v2/login/B_oracle/run3/gen.spec.ts:78:5 › /#/login › challenge "dlpPasswordSprayingChallenge" › should be able to log in with original Jannik credentials
+  9) results_v2/login/B_oracle/run3/gen.spec.ts:78:5 › /#/login › challenge "dlpPasswordSprayingChallenge" › should be able to log in with original Jannik credentials 
+
+    TimeoutError: page.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#loginButton')
+        - locator resolved to <button type="submit" color="primary" id="loginButton" aria-label="Login" mat-raised-button="" _ngcontent-ng-c347502026="" mat-ripple-loader-uninitialized="" mat-ripple-loader-class-name="mat-mdc-button-ripple" class="mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        19 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+
+
+      80 |       await page.type('#email', `J12934@${domain}`);
+      81 |       await page.type('#password', '0Y8rMnww$*9VFYE§59-!Fg1L6t&6lB');
+    > 82 |       await page.click('#loginButton');
+         |                  ^
+      83 |     });
+      84 |   });
+      85 |
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_oracle/run3/gen.spec.ts:82:18
+
+    Error Context: test-results/results_v2-login-B_oracle--136c3-original-Jannik-credentials/error-context.md
+
+
+[10/15] results_v2/login/B_oracle/run3/gen.spec.ts:87:5 › /#/login › challenge "twoFactorAuthUnsafeSecretStorageChallenge" › should be able to log into a 2fa protected account given the right token
+  10) results_v2/login/B_oracle/run3/gen.spec.ts:87:5 › /#/login › challenge "twoFactorAuthUnsafeSecretStorageChallenge" › should be able to log into a 2fa protected account given the right token 
+
+    TimeoutError: page.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#loginButton')
+        - locator resolved to <button type="submit" color="primary" id="loginButton" aria-label="Login" mat-raised-button="" _ngcontent-ng-c347502026="" mat-ripple-loader-uninitialized="" mat-ripple-loader-class-name="mat-mdc-button-ripple" class="mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        19 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+
+
+      89 |       await page.type('#email', `wurstbrot@${domain}'--`);
+      90 |       await page.type('#password', 'Never mind...');
+    > 91 |       await page.click('#loginButton');
+         |                  ^
+      92 |
+      93 |       const totpToken = 'IFTXE3SPOEYVURT2MRYGI52TKJ4HC3KH';
+      94 |       await page.type('#totpToken', totpToken);
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_oracle/run3/gen.spec.ts:91:18
+
+    Error Context: test-results/results_v2-login-B_oracle--5f4c9-count-given-the-right-token/error-context.md
+
+
+[11/15] results_v2/login/B_oracle/run3/gen.spec.ts:100:5 › /#/login › challenge "oauthUserPasswordChallenge" › should be able to log in as bjoern.kimminich@gmail.com with base64-encoded email as password
+  11) results_v2/login/B_oracle/run3/gen.spec.ts:100:5 › /#/login › challenge "oauthUserPasswordChallenge" › should be able to log in as bjoern.kimminich@gmail.com with base64-encoded email as password 
+
+    TimeoutError: page.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#loginButton')
+        - locator resolved to <button type="submit" color="primary" id="loginButton" aria-label="Login" mat-raised-button="" _ngcontent-ng-c347502026="" mat-ripple-loader-uninitialized="" mat-ripple-loader-class-name="mat-mdc-button-ripple" class="mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        19 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+
+
+      101 |       await page.type('#email', 'bjoern.kimminich@gmail.com');
+      102 |       await page.type('#password', 'bW9jLmxpYW1nQGhjaW5pbW1pay5ucmVvamI=');
+    > 103 |       await page.click('#loginButton');
+          |                  ^
+      104 |
+      105 |       await expect(page).toHaveURL('/#/dashboard');
+      106 |     });
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_oracle/run3/gen.spec.ts:103:18
+
+    Error Context: test-results/results_v2-login-B_oracle--55fa9-4-encoded-email-as-password/error-context.md
+
+
+[12/15] results_v2/login/B_oracle/run3/gen.spec.ts:110:5 › /#/login › challenge "ghostLoginChallenge" › should be able to log in as chris.pike@juice-sh.op by using "' or deletedAt IS NOT NULL --"
+  12) results_v2/login/B_oracle/run3/gen.spec.ts:110:5 › /#/login › challenge "ghostLoginChallenge" › should be able to log in as chris.pike@juice-sh.op by using "' or deletedAt IS NOT NULL --" 
+
+    TimeoutError: page.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#loginButton')
+        - locator resolved to <button type="submit" color="primary" id="loginButton" aria-label="Login" mat-raised-button="" _ngcontent-ng-c347502026="" mat-ripple-loader-uninitialized="" mat-ripple-loader-class-name="mat-mdc-button-ripple" class="mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        19 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+
+
+      111 |       await page.type('#email', "' or deletedAt IS NOT NULL--");
+      112 |       await page.type('#password', 'a');
+    > 113 |       await page.click('#loginButton');
+          |                  ^
+      114 |     });
+      115 |
+      116 |     test('should be able to log in as chris.pike@juice-sh.op by using "chris.pike@juice-sh.op\' --"', async ({ page }) => {
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_oracle/run3/gen.spec.ts:113:18
+
+    Error Context: test-results/results_v2-login-B_oracle--bf8fe-r-deletedAt-IS-NOT-NULL----/error-context.md
+
+
+[13/15] results_v2/login/B_oracle/run3/gen.spec.ts:116:5 › /#/login › challenge "ghostLoginChallenge" › should be able to log in as chris.pike@juice-sh.op by using "chris.pike@juice-sh.op' --"
+  13) results_v2/login/B_oracle/run3/gen.spec.ts:116:5 › /#/login › challenge "ghostLoginChallenge" › should be able to log in as chris.pike@juice-sh.op by using "chris.pike@juice-sh.op' --" 
+
+    TimeoutError: page.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#loginButton')
+        - locator resolved to <button type="submit" color="primary" id="loginButton" aria-label="Login" mat-raised-button="" _ngcontent-ng-c347502026="" mat-ripple-loader-uninitialized="" mat-ripple-loader-class-name="mat-mdc-button-ripple" class="mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        19 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+
+
+      118 |       await page.type('#email', `chris.pike@${domain}'--`);
+      119 |       await page.type('#password', 'a');
+    > 120 |       await page.click('#loginButton');
+          |                  ^
+      121 |     });
+      122 |   });
+      123 |
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_oracle/run3/gen.spec.ts:120:18
+
+    Error Context: test-results/results_v2-login-B_oracle--08b39--chris-pike-juice-sh-op----/error-context.md
+
+
+[14/15] results_v2/login/B_oracle/run3/gen.spec.ts:125:5 › /#/login › challenge "ephemeralAccountant" › should log in non-existing accountant user with SQLI attack on email field using UNION SELECT payload
+  14) results_v2/login/B_oracle/run3/gen.spec.ts:125:5 › /#/login › challenge "ephemeralAccountant" › should log in non-existing accountant user with SQLI attack on email field using UNION SELECT payload 
+
+    TimeoutError: page.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#loginButton')
+        - locator resolved to <button type="submit" color="primary" id="loginButton" aria-label="Login" mat-raised-button="" _ngcontent-ng-c347502026="" mat-ripple-loader-uninitialized="" mat-ripple-loader-class-name="mat-mdc-button-ripple" class="mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        19 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+
+
+      126 |       await page.type('#email', "' UNION SELECT * FROM (SELECT 15 as 'id', '' as 'username', 'acc0unt4nt@juice-sh.op' as 'email', '12345' as 'password', 'accounting' as 'role', '123' as 'deluxeToken', '1.2.3.4' as 'lastLoginIp' , '/assets/public/images/uploads/default.svg' as 'profileImage', '' as 'totpSecret', 1 as 'isActive', '1999-08-16 14:14:41.644 +00:00' as 'createdAt', '1999-08-16 14:33:41.930 +00:00' as 'updatedAt', null as 'deletedAt')--");
+      127 |       await page.type('#password', 'a');
+    > 128 |       await page.click('#loginButton');
+          |                  ^
+      129 |       await expect(page).toHaveURL('/#/dashboard');
+      130 |     });
+      131 |   });
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_oracle/run3/gen.spec.ts:128:18
+
+    Error Context: test-results/results_v2-login-B_oracle--f4165--using-UNION-SELECT-payload/error-context.md
+
+
+[15/15] results_v2/login/B_oracle/run3/gen.spec.ts:134:5 › /#/login › challenge "exposedCredentialsChallenge" › should be able to log in with testing credentials that are leaked on client
+  15) results_v2/login/B_oracle/run3/gen.spec.ts:134:5 › /#/login › challenge "exposedCredentialsChallenge" › should be able to log in with testing credentials that are leaked on client 
+
+    TimeoutError: page.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#loginButton')
+        - locator resolved to <button type="submit" color="primary" id="loginButton" aria-label="Login" mat-raised-button="" _ngcontent-ng-c347502026="" mat-ripple-loader-uninitialized="" mat-ripple-loader-class-name="mat-mdc-button-ripple" class="mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        19 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+
+
+      136 |       await page.type('#email', `testing@${domain}`);
+      137 |       await page.type('#password', 'IamUsedForTesting');
+    > 138 |       await page.click('#loginButton');
+          |                  ^
+      139 |     });
+      140 |   });
+      141 | });
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_oracle/run3/gen.spec.ts:138:18
+
+    Error Context: test-results/results_v2-login-B_oracle--67987-s-that-are-leaked-on-client/error-context.md
+
+
+  15 failed
+    results_v2/login/B_oracle/run3/gen.spec.ts:9:5 › /#/login › challenge "loginAdminChallenge" › should log in Admin with SQLI attack on email field using "' or 1=1--" 
+    results_v2/login/B_oracle/run3/gen.spec.ts:15:5 › /#/login › challenge "loginAdminChallenge" › should log in Admin with SQLI attack on email field using "admin@<juice-sh.op>'--" 
+    results_v2/login/B_oracle/run3/gen.spec.ts:24:5 › /#/login › challenge "loginJimChallenge" › should log in Jim with SQLI attack on email field using "jim@<juice-sh.op>'--" 
+    results_v2/login/B_oracle/run3/gen.spec.ts:33:5 › /#/login › challenge "loginBenderChallenge" › should log in Bender with SQLI attack on email field using "bender@<juice-sh.op>'--" 
+    results_v2/login/B_oracle/run3/gen.spec.ts:42:5 › /#/login › challenge "weakPasswordChallenge" › should be able to log in with original (weak) admin credentials 
+    results_v2/login/B_oracle/run3/gen.spec.ts:51:5 › /#/login › challenge "loginSupportChallenge" › should be able to log in with original support-team credentials 
+    results_v2/login/B_oracle/run3/gen.spec.ts:60:5 › /#/login › challenge "loginRapperChallenge" › should be able to log in with original MC SafeSearch credentials 
+    results_v2/login/B_oracle/run3/gen.spec.ts:69:5 › /#/login › challenge "loginAmyChallenge" › should be able to log in with original Amy credentials 
+    results_v2/login/B_oracle/run3/gen.spec.ts:78:5 › /#/login › challenge "dlpPasswordSprayingChallenge" › should be able to log in with original Jannik credentials 
+    results_v2/login/B_oracle/run3/gen.spec.ts:87:5 › /#/login › challenge "twoFactorAuthUnsafeSecretStorageChallenge" › should be able to log into a 2fa protected account given the right token 
+    results_v2/login/B_oracle/run3/gen.spec.ts:100:5 › /#/login › challenge "oauthUserPasswordChallenge" › should be able to log in as bjoern.kimminich@gmail.com with base64-encoded email as password 
+    results_v2/login/B_oracle/run3/gen.spec.ts:110:5 › /#/login › challenge "ghostLoginChallenge" › should be able to log in as chris.pike@juice-sh.op by using "' or deletedAt IS NOT NULL --" 
+    results_v2/login/B_oracle/run3/gen.spec.ts:116:5 › /#/login › challenge "ghostLoginChallenge" › should be able to log in as chris.pike@juice-sh.op by using "chris.pike@juice-sh.op' --" 
+    results_v2/login/B_oracle/run3/gen.spec.ts:125:5 › /#/login › challenge "ephemeralAccountant" › should log in non-existing accountant user with SQLI attack on email field using UNION SELECT payload 
+    results_v2/login/B_oracle/run3/gen.spec.ts:134:5 › /#/login › challenge "exposedCredentialsChallenge" › should be able to log in with testing credentials that are leaked on client 
+

@@ -1,0 +1,21 @@
+{
+  "story": "login",
+  "condition": "C_oracle",
+  "run": 2,
+  "seed": 2007,
+  "contextFiles": [
+    "test/cypress/e2e/login.spec.ts",
+    "test/cypress/support/setup.ts"
+  ],
+  "promptTokens": 2349,
+  "outputTokens": 1825,
+  "genSeconds": 93.671502084,
+  "testsTotal": 0,
+  "testsPassed": 0,
+  "topErrors": [
+    "Error: Cannot find module '/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/C_oracle/run2/playwright.config' imported from /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/C_oracle/run2/gen.spec.ts",
+    "Error: No tests found.\nMake sure that arguments are regular expressions matching test files.\nYou may need to escape symbols like \"$\" or \"*\" and quote the arguments."
+  ],
+  "tests": [],
+  "runCategory": "api_or_syntax_error"
+}

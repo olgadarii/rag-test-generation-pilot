@@ -1,0 +1,14 @@
+{
+  "name": "rag-test-generation-experiment",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "RAG test generation pilot (IRI 2026): BGE-M3 retrieval + Qwen2.5-7B-Instruct generation + Playwright execution against live OWASP Juice Shop",
+  "scripts": {
+    "experiment": "node run.mjs",
+    "summary": "node summarize.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0"
+  }
+}

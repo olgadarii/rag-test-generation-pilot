@@ -1,0 +1,33 @@
+{
+  "story": "search",
+  "condition": "C_auto",
+  "run": 1,
+  "seed": 1007,
+  "contextFiles": [
+    "test/cypress/e2e/search.spec.ts",
+    "test/cypress/support/e2e.ts",
+    "test/cypress/support/commands.ts",
+    "test/cypress/support/setup.ts"
+  ],
+  "promptTokens": 2052,
+  "outputTokens": 234,
+  "genSeconds": 15.855774583,
+  "testsTotal": 2,
+  "testsPassed": 0,
+  "topErrors": [],
+  "tests": [
+    {
+      "title": "search query should return matching products",
+      "status": "failed",
+      "error": "Error: page.fill: Error: Element is not an <input>, <textarea>, <select> or [contenteditable] and does not have a role allowing [aria-readonly]\nCall log:\n  - waiting for locator('#searchQuery')\n    - locator resolved to <app-mat-search-bar id=\"searchQuery\" _nghost-ng-c1668053465=\"\" _ngcontent-ng-c1731522247=\"\" aria-label=\"Click to search\">…</app-mat-search-bar>\n    - fill(\"test product\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
+      "category": "selector_not_found"
+    },
+    {
+      "title": "search field must resist reflected cross-site scripting",
+      "status": "failed",
+      "error": "Error: page.fill: Error: Element is not an <input>, <textarea>, <select> or [contenteditable] and does not have a role allowing [aria-readonly]\nCall log:\n  - waiting for locator('#searchQuery')\n    - locator resolved to <app-mat-search-bar id=\"searchQuery\" _nghost-ng-c1668053465=\"\" _ngcontent-ng-c1731522247=\"\" aria-label=\"Click to search\">…</app-mat-search-bar>\n    - fill(\"<script>alert(\"xss\")</script>\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
+      "category": "selector_not_found"
+    }
+  ],
+  "runCategory": null
+}

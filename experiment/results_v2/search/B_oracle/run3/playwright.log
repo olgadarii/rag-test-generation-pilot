@@ -1,0 +1,73 @@
+
+Running 3 tests using 1 worker
+
+[1/3] results_v2/search/B_oracle/run3/gen.spec.ts:8:3 › /#/search › search query should return matching products
+  1) results_v2/search/B_oracle/run3/gen.spec.ts:8:3 › /#/search › search query should return matching products 
+
+    Error: locator.fill: Error: Element is not an <input>, <textarea>, <select> or [contenteditable] and does not have a role allowing [aria-readonly]
+    Call log:
+      - waiting for locator('#searchQuery')
+        - locator resolved to <app-mat-search-bar id="searchQuery" _nghost-ng-c1668053465="" _ngcontent-ng-c1731522247="" aria-label="Click to search">…</app-mat-search-bar>
+        - fill("test product")
+      - attempting fill action
+        - waiting for element to be visible, enabled and editable
+
+
+       7 |
+       8 |   test('search query should return matching products', async ({ page }) => {
+    >  9 |     await page.locator('#searchQuery').fill('test product')
+         |                                        ^
+      10 |     await page.locator('app-mat-search-bar input').press('Enter')
+      11 |     await expect(page.locator('.product-list .product-item')).toBeVisible()
+      12 |   })
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/B_oracle/run3/gen.spec.ts:9:40
+
+    Error Context: test-results/results_v2-search-B_oracle-acbeb-ld-return-matching-products/error-context.md
+
+
+[2/3] results_v2/search/B_oracle/run3/gen.spec.ts:14:3 › /#/search › search field must resist reflected XSS attacks
+  2) results_v2/search/B_oracle/run3/gen.spec.ts:14:3 › /#/search › search field must resist reflected XSS attacks 
+
+    Error: locator.fill: Error: Element is not an <input>, <textarea>, <select> or [contenteditable] and does not have a role allowing [aria-readonly]
+    Call log:
+      - waiting for locator('#searchQuery')
+        - locator resolved to <app-mat-search-bar id="searchQuery" _nghost-ng-c1668053465="" _ngcontent-ng-c1731522247="" aria-label="Click to search">…</app-mat-search-bar>
+        - fill("<iframe src="javascript:alert(`xss`)">")
+      - attempting fill action
+        - waiting for element to be visible, enabled and editable
+
+
+      13 |
+      14 |   test('search field must resist reflected XSS attacks', async ({ page }) => {
+    > 15 |     await page.locator('#searchQuery').fill('<iframe src="javascript:alert(`xss`)">')
+         |                                        ^
+      16 |     await page.locator('app-mat-search-bar input').press('Enter')
+      17 |     await page.waitForSelector('.alert', { state: 'hidden' })
+      18 |   })
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/B_oracle/run3/gen.spec.ts:15:40
+
+    Error Context: test-results/results_v2-search-B_oracle-015af-esist-reflected-XSS-attacks/error-context.md
+
+
+[3/3] results_v2/search/B_oracle/run3/gen.spec.ts:22:3 › /rest/products/search › query param in product search endpoint should return matching products
+  3) results_v2/search/B_oracle/run3/gen.spec.ts:22:3 › /rest/products/search › query param in product search endpoint should return matching products 
+
+    TypeError: received is not iterable
+
+      23 |     const response = await page.request.get('/rest/products/search?q=test product')
+      24 |     expect(response.ok()).toBeTruthy()
+    > 25 |     expect(await response.json()).toContain('test product')
+         |                                   ^
+      26 |   })
+      27 | })
+      28 |
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/B_oracle/run3/gen.spec.ts:25:35
+
+    Error Context: test-results/results_v2-search-B_oracle-57a09-ld-return-matching-products/error-context.md
+
+
+  3 failed
+    results_v2/search/B_oracle/run3/gen.spec.ts:8:3 › /#/search › search query should return matching products 
+    results_v2/search/B_oracle/run3/gen.spec.ts:14:3 › /#/search › search field must resist reflected XSS attacks 
+    results_v2/search/B_oracle/run3/gen.spec.ts:22:3 › /rest/products/search › query param in product search endpoint should return matching products 
+

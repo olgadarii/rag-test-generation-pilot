@@ -1,0 +1,291 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/26.8.1/bin/node",
+      "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/node_modules/.bin/playwright",
+      "test",
+      "results_v2/search/C_oracle/run1/gen.spec.ts",
+      "--config",
+      "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/playwright.config.mjs"
+    ],
+    "configFile": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/playwright.config.mjs",
+    "rootDir": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment",
+        "testIgnore": [],
+        "testMatch": [
+          "/gen\\.spec\\.ts$/"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "results_v2/search/C_oracle/run1/gen.spec.ts",
+      "file": "results_v2/search/C_oracle/run1/gen.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "/#/search",
+          "file": "results_v2/search/C_oracle/run1/gen.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "search query should return matching products",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 230,
+                      "error": {
+                        "message": "Error: locator.fill: Error: Element is not an <input>, <textarea>, <select> or [contenteditable] and does not have a role allowing [aria-readonly]\nCall log:\n\u001b[2m  - waiting for locator('#searchQuery')\u001b[22m\n\u001b[2m    - locator resolved to <app-mat-search-bar id=\"searchQuery\" _nghost-ng-c1668053465=\"\" _ngcontent-ng-c1731522247=\"\" aria-label=\"Click to search\">…</app-mat-search-bar>\u001b[22m\n\u001b[2m    - fill(\"test product\")\u001b[22m\n\u001b[2m  - attempting fill action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and editable\u001b[22m\n",
+                        "stack": "Error: locator.fill: Error: Element is not an <input>, <textarea>, <select> or [contenteditable] and does not have a role allowing [aria-readonly]\nCall log:\n\u001b[2m  - waiting for locator('#searchQuery')\u001b[22m\n\u001b[2m    - locator resolved to <app-mat-search-bar id=\"searchQuery\" _nghost-ng-c1668053465=\"\" _ngcontent-ng-c1731522247=\"\" aria-label=\"Click to search\">…</app-mat-search-bar>\u001b[22m\n\u001b[2m    - fill(\"test product\")\u001b[22m\n\u001b[2m  - attempting fill action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and editable\u001b[22m\n\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_oracle/run1/gen.spec.ts:10:40",
+                        "location": {
+                          "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_oracle/run1/gen.spec.ts",
+                          "column": 40,
+                          "line": 10
+                        },
+                        "snippet": "   8 |   test('search query should return matching products', async ({ page }) => {\n   9 |     const searchQuery = 'test product'\n> 10 |     await page.locator('#searchQuery').fill(searchQuery)\n     |                                        ^\n  11 |     await page.locator('app-mat-search-bar input').press('Enter')\n  12 |\n  13 |     const expectedProducts = await page.locator('.product-list .product')"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_oracle/run1/gen.spec.ts",
+                            "column": 40,
+                            "line": 10
+                          },
+                          "message": "Error: locator.fill: Error: Element is not an <input>, <textarea>, <select> or [contenteditable] and does not have a role allowing [aria-readonly]\nCall log:\n\u001b[2m  - waiting for locator('#searchQuery')\u001b[22m\n\u001b[2m    - locator resolved to <app-mat-search-bar id=\"searchQuery\" _nghost-ng-c1668053465=\"\" _ngcontent-ng-c1731522247=\"\" aria-label=\"Click to search\">…</app-mat-search-bar>\u001b[22m\n\u001b[2m    - fill(\"test product\")\u001b[22m\n\u001b[2m  - attempting fill action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and editable\u001b[22m\n\n\n   8 |   test('search query should return matching products', async ({ page }) => {\n   9 |     const searchQuery = 'test product'\n> 10 |     await page.locator('#searchQuery').fill(searchQuery)\n     |                                        ^\n  11 |     await page.locator('app-mat-search-bar input').press('Enter')\n  12 |\n  13 |     const expectedProducts = await page.locator('.product-list .product')\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_oracle/run1/gen.spec.ts:10:40"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-08T19:20:50.443Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/test-results/results_v2-search-C_oracle-6c547-ld-return-matching-products/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_oracle/run1/gen.spec.ts",
+                        "column": 40,
+                        "line": 10
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "0b18e6450231f3d25edb-008af2a87543130a86a4",
+              "file": "results_v2/search/C_oracle/run1/gen.spec.ts",
+              "line": 8,
+              "column": 3
+            },
+            {
+              "title": "search field must resist reflected XSS attacks",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 208,
+                      "error": {
+                        "message": "Error: locator.fill: Error: Element is not an <input>, <textarea>, <select> or [contenteditable] and does not have a role allowing [aria-readonly]\nCall log:\n\u001b[2m  - waiting for locator('#searchQuery')\u001b[22m\n\u001b[2m    - locator resolved to <app-mat-search-bar id=\"searchQuery\" _nghost-ng-c1668053465=\"\" _ngcontent-ng-c1731522247=\"\" aria-label=\"Click to search\">…</app-mat-search-bar>\u001b[22m\n\u001b[2m    - fill(\"<iframe src=\"javascript:alert(`xss`)\">\")\u001b[22m\n\u001b[2m  - attempting fill action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and editable\u001b[22m\n",
+                        "stack": "Error: locator.fill: Error: Element is not an <input>, <textarea>, <select> or [contenteditable] and does not have a role allowing [aria-readonly]\nCall log:\n\u001b[2m  - waiting for locator('#searchQuery')\u001b[22m\n\u001b[2m    - locator resolved to <app-mat-search-bar id=\"searchQuery\" _nghost-ng-c1668053465=\"\" _ngcontent-ng-c1731522247=\"\" aria-label=\"Click to search\">…</app-mat-search-bar>\u001b[22m\n\u001b[2m    - fill(\"<iframe src=\"javascript:alert(`xss`)\">\")\u001b[22m\n\u001b[2m  - attempting fill action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and editable\u001b[22m\n\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_oracle/run1/gen.spec.ts:19:40",
+                        "location": {
+                          "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_oracle/run1/gen.spec.ts",
+                          "column": 40,
+                          "line": 19
+                        },
+                        "snippet": "  17 |   test('search field must resist reflected XSS attacks', async ({ page }) => {\n  18 |     const xssPayload = '<iframe src=\"javascript:alert(`xss`)\">'\n> 19 |     await page.locator('#searchQuery').fill(xssPayload)\n     |                                        ^\n  20 |     await page.locator('app-mat-search-bar input').press('Enter')\n  21 |\n  22 |     await page.waitForSelector('.alert', { state: 'hidden' })"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_oracle/run1/gen.spec.ts",
+                            "column": 40,
+                            "line": 19
+                          },
+                          "message": "Error: locator.fill: Error: Element is not an <input>, <textarea>, <select> or [contenteditable] and does not have a role allowing [aria-readonly]\nCall log:\n\u001b[2m  - waiting for locator('#searchQuery')\u001b[22m\n\u001b[2m    - locator resolved to <app-mat-search-bar id=\"searchQuery\" _nghost-ng-c1668053465=\"\" _ngcontent-ng-c1731522247=\"\" aria-label=\"Click to search\">…</app-mat-search-bar>\u001b[22m\n\u001b[2m    - fill(\"<iframe src=\"javascript:alert(`xss`)\">\")\u001b[22m\n\u001b[2m  - attempting fill action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and editable\u001b[22m\n\n\n  17 |   test('search field must resist reflected XSS attacks', async ({ page }) => {\n  18 |     const xssPayload = '<iframe src=\"javascript:alert(`xss`)\">'\n> 19 |     await page.locator('#searchQuery').fill(xssPayload)\n     |                                        ^\n  20 |     await page.locator('app-mat-search-bar input').press('Enter')\n  21 |\n  22 |     await page.waitForSelector('.alert', { state: 'hidden' })\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_oracle/run1/gen.spec.ts:19:40"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-08T19:20:50.918Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/test-results/results_v2-search-C_oracle-5944b-esist-reflected-XSS-attacks/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_oracle/run1/gen.spec.ts",
+                        "column": 40,
+                        "line": 19
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "0b18e6450231f3d25edb-0e3c19cfea4e08804e67",
+              "file": "results_v2/search/C_oracle/run1/gen.spec.ts",
+              "line": 17,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "/rest/products/search",
+          "file": "results_v2/search/C_oracle/run1/gen.spec.ts",
+          "line": 26,
+          "column": 6,
+          "specs": [
+            {
+              "title": "query param in product search endpoint should not return sensitive information",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 26,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_oracle/run1/gen.spec.ts:30:27",
+                        "location": {
+                          "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_oracle/run1/gen.spec.ts",
+                          "column": 27,
+                          "line": 30
+                        },
+                        "snippet": "  28 |     const query = \"'--\"\n  29 |     const response = await request.get(`/rest/products/search?q=${query}`)\n> 30 |     expect(response.ok()).toBeTruthy()\n     |                           ^\n  31 |     const body = await response.json()\n  32 |     expect(body.data).not.toContain('password')\n  33 |   })"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_oracle/run1/gen.spec.ts",
+                            "column": 27,
+                            "line": 30
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  28 |     const query = \"'--\"\n  29 |     const response = await request.get(`/rest/products/search?q=${query}`)\n> 30 |     expect(response.ok()).toBeTruthy()\n     |                           ^\n  31 |     const body = await response.json()\n  32 |     expect(body.data).not.toContain('password')\n  33 |   })\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_oracle/run1/gen.spec.ts:30:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-08T19:20:51.366Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/test-results/results_v2-search-C_oracle-20a26-eturn-sensitive-information/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_oracle/run1/gen.spec.ts",
+                        "column": 27,
+                        "line": 30
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "0b18e6450231f3d25edb-48febeb48e1d63e085b4",
+              "file": "results_v2/search/C_oracle/run1/gen.spec.ts",
+              "line": 27,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-08T19:20:50.233Z",
+    "duration": 1177.5829999999999,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 3,
+    "flaky": 0
+  }
+}

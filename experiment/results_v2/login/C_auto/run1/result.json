@@ -1,0 +1,57 @@
+{
+  "story": "login",
+  "condition": "C_auto",
+  "run": 1,
+  "seed": 1007,
+  "contextFiles": [
+    "test/cypress/e2e/totpSetup.spec.ts",
+    "test/cypress/support/e2e.ts",
+    "test/cypress/support/commands.ts",
+    "test/cypress/support/setup.ts"
+  ],
+  "promptTokens": 1292,
+  "outputTokens": 519,
+  "genSeconds": 29.166780916,
+  "testsTotal": 6,
+  "testsPassed": 0,
+  "topErrors": [],
+  "tests": [
+    {
+      "title": "valid credentials login",
+      "status": "failed",
+      "error": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('#loginButton')\n    - locator resolved to <button type=\"submit\" color=\"primary\" id=\"loginButton\" aria-label=\"Login\" mat-raised-button=\"\" _ngcontent-ng-c347502026=\"\" mat-ripple-loader-uninitialized=\"\" mat-ripple-loader-class-name=\"mat-mdc-button-ripple\" class=\"mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary\">…</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    19 × waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\n     - retrying click action\n       - waiting 500ms\n",
+      "category": "overlay_blocked"
+    },
+    {
+      "title": "invalid credentials login",
+      "status": "failed",
+      "error": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('#loginButton')\n    - locator resolved to <button type=\"submit\" color=\"primary\" id=\"loginButton\" aria-label=\"Login\" mat-raised-button=\"\" _ngcontent-ng-c347502026=\"\" mat-ripple-loader-uninitialized=\"\" mat-ripple-loader-class-name=\"mat-mdc-button-ripple\" class=\"mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary\">…</button>\n  - attempting click action\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <h1>…</h1> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\n  - retrying click action\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\n  - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    19 × waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\n     - retrying click action\n       - waiting 500ms\n",
+      "category": "overlay_blocked"
+    },
+    {
+      "title": "security regression - SQL injection in email",
+      "status": "failed",
+      "error": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('#loginButton')\n    - locator resolved to <button type=\"submit\" color=\"primary\" id=\"loginButton\" aria-label=\"Login\" mat-raised-button=\"\" _ngcontent-ng-c347502026=\"\" mat-ripple-loader-uninitialized=\"\" mat-ripple-loader-class-name=\"mat-mdc-button-ripple\" class=\"mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary\">…</button>\n  - attempting click action\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <h1>…</h1> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\n  - retrying click action\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\n  - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    19 × waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\n     - retrying click action\n       - waiting 500ms\n",
+      "category": "overlay_blocked"
+    },
+    {
+      "title": "security regression - known weak password",
+      "status": "failed",
+      "error": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('#loginButton')\n    - locator resolved to <button type=\"submit\" color=\"primary\" id=\"loginButton\" aria-label=\"Login\" mat-raised-button=\"\" _ngcontent-ng-c347502026=\"\" mat-ripple-loader-uninitialized=\"\" mat-ripple-loader-class-name=\"mat-mdc-button-ripple\" class=\"mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary\">…</button>\n  - attempting click action\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <app-welcome-banner _nghost-ng-c3578434029=\"\" class=\"mat-mdc-dialog-component-host\">…</app-welcome-banner> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\n  - retrying click action\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\n  - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    19 × waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\n     - retrying click action\n       - waiting 500ms\n",
+      "category": "overlay_blocked"
+    },
+    {
+      "title": "2FA enabled account login",
+      "status": "failed",
+      "error": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('#totpInput')\n",
+      "category": "selector_not_found"
+    },
+    {
+      "title": "2FA setup for account without 2FA",
+      "status": "failed",
+      "error": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('#setupTwoFactorAuth')\n",
+      "category": "selector_not_found"
+    }
+  ],
+  "runCategory": null
+}

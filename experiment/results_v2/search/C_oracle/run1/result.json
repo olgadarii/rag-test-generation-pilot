@@ -1,0 +1,37 @@
+{
+  "story": "search",
+  "condition": "C_oracle",
+  "run": 1,
+  "seed": 1007,
+  "contextFiles": [
+    "test/cypress/e2e/search.spec.ts",
+    "test/cypress/support/setup.ts"
+  ],
+  "promptTokens": 1418,
+  "outputTokens": 297,
+  "genSeconds": 15.738362375,
+  "testsTotal": 3,
+  "testsPassed": 0,
+  "topErrors": [],
+  "tests": [
+    {
+      "title": "search query should return matching products",
+      "status": "failed",
+      "error": "Error: locator.fill: Error: Element is not an <input>, <textarea>, <select> or [contenteditable] and does not have a role allowing [aria-readonly]\nCall log:\n  - waiting for locator('#searchQuery')\n    - locator resolved to <app-mat-search-bar id=\"searchQuery\" _nghost-ng-c1668053465=\"\" _ngcontent-ng-c1731522247=\"\" aria-label=\"Click to search\">…</app-mat-search-bar>\n    - fill(\"test product\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
+      "category": "selector_not_found"
+    },
+    {
+      "title": "search field must resist reflected XSS attacks",
+      "status": "failed",
+      "error": "Error: locator.fill: Error: Element is not an <input>, <textarea>, <select> or [contenteditable] and does not have a role allowing [aria-readonly]\nCall log:\n  - waiting for locator('#searchQuery')\n    - locator resolved to <app-mat-search-bar id=\"searchQuery\" _nghost-ng-c1668053465=\"\" _ngcontent-ng-c1731522247=\"\" aria-label=\"Click to search\">…</app-mat-search-bar>\n    - fill(\"<iframe src=\"javascript:alert(`xss`)\">\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
+      "category": "selector_not_found"
+    },
+    {
+      "title": "query param in product search endpoint should not return sensitive information",
+      "status": "failed",
+      "error": "Error: expect(received).toBeTruthy()\n\nReceived: false",
+      "category": "assertion_failed"
+    }
+  ],
+  "runCategory": null
+}

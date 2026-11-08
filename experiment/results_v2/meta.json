@@ -1,0 +1,38 @@
+{
+  "started": "2026-11-08T19:08:12.980Z",
+  "config": {
+    "juice": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/juice-src",
+    "runs": 3,
+    "stories": [
+      "login",
+      "search"
+    ],
+    "conditions": [
+      "A",
+      "B_auto",
+      "C_auto",
+      "B_oracle",
+      "C_oracle"
+    ],
+    "baseUrl": "http://localhost:3000",
+    "genModel": "qwen2.5:7b-instruct",
+    "embModel": "bge-m3",
+    "temperature": 0.7,
+    "numCtx": 16384,
+    "reset": "bash juice.sh restart",
+    "out": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2",
+    "mock": false
+  },
+  "juiceCommit": "46816445dcf048171d0766c37954fa9947211bdc",
+  "corpusSize": 33,
+  "models": [
+    {
+      "model": "qwen2.5:7b-instruct",
+      "digest": "qwen2 7.6B Q4_K_M"
+    },
+    {
+      "model": "bge-m3",
+      "digest": "bert 566.70M F16"
+    }
+  ]
+}

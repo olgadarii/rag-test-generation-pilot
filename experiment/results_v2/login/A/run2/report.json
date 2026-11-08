@@ -1,0 +1,411 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/26.8.1/bin/node",
+      "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/node_modules/.bin/playwright",
+      "test",
+      "results_v2/login/A/run2/gen.spec.ts",
+      "--config",
+      "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/playwright.config.mjs"
+    ],
+    "configFile": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/playwright.config.mjs",
+    "rootDir": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment",
+        "testIgnore": [],
+        "testMatch": [
+          "/gen\\.spec\\.ts$/"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "results_v2/login/A/run2/gen.spec.ts",
+      "file": "results_v2/login/A/run2/gen.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Login",
+          "file": "results_v2/login/A/run2/gen.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "valid credentials should log in successfully",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10231,
+                      "error": {
+                        "message": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"email\"]')\u001b[22m\n",
+                        "stack": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"email\"]')\u001b[22m\n\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/A/run2/gen.spec.ts:9:20",
+                        "location": {
+                          "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/A/run2/gen.spec.ts",
+                          "column": 20,
+                          "line": 9
+                        },
+                        "snippet": "   7 |\n   8 |     test('valid credentials should log in successfully', async ({ page }) => {\n>  9 |         await page.fill('input[name=\"email\"]', 'valid@example.com');\n     |                    ^\n  10 |         await page.fill('input[name=\"password\"]', 'ValidPassword123');\n  11 |         await page.click('button[type=\"submit\"]');\n  12 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/A/run2/gen.spec.ts",
+                            "column": 20,
+                            "line": 9
+                          },
+                          "message": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"email\"]')\u001b[22m\n\n\n   7 |\n   8 |     test('valid credentials should log in successfully', async ({ page }) => {\n>  9 |         await page.fill('input[name=\"email\"]', 'valid@example.com');\n     |                    ^\n  10 |         await page.fill('input[name=\"password\"]', 'ValidPassword123');\n  11 |         await page.click('button[type=\"submit\"]');\n  12 |\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/A/run2/gen.spec.ts:9:20"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-08T19:21:19.062Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/test-results/results_v2-login-A-run2-ge-53632--should-log-in-successfully/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/A/run2/gen.spec.ts",
+                        "column": 20,
+                        "line": 9
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "417744e13480eee7b5fd-469c15fa9cf912fccc02",
+              "file": "results_v2/login/A/run2/gen.spec.ts",
+              "line": 8,
+              "column": 5
+            },
+            {
+              "title": "invalid credentials should fail to log in",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10226,
+                      "error": {
+                        "message": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"email\"]')\u001b[22m\n",
+                        "stack": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"email\"]')\u001b[22m\n\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/A/run2/gen.spec.ts:17:20",
+                        "location": {
+                          "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/A/run2/gen.spec.ts",
+                          "column": 20,
+                          "line": 17
+                        },
+                        "snippet": "  15 |\n  16 |     test('invalid credentials should fail to log in', async ({ page }) => {\n> 17 |         await page.fill('input[name=\"email\"]', 'invalid@example.com');\n     |                    ^\n  18 |         await page.fill('input[name=\"password\"]', 'InvalidPassword123');\n  19 |         await page.click('button[type=\"submit\"]');\n  20 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/A/run2/gen.spec.ts",
+                            "column": 20,
+                            "line": 17
+                          },
+                          "message": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"email\"]')\u001b[22m\n\n\n  15 |\n  16 |     test('invalid credentials should fail to log in', async ({ page }) => {\n> 17 |         await page.fill('input[name=\"email\"]', 'invalid@example.com');\n     |                    ^\n  18 |         await page.fill('input[name=\"password\"]', 'InvalidPassword123');\n  19 |         await page.click('button[type=\"submit\"]');\n  20 |\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/A/run2/gen.spec.ts:17:20"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-08T19:21:29.553Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/test-results/results_v2-login-A-run2-ge-b0e28-tials-should-fail-to-log-in/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/A/run2/gen.spec.ts",
+                        "column": 20,
+                        "line": 17
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "417744e13480eee7b5fd-2bf3d2bdbb82526fd343",
+              "file": "results_v2/login/A/run2/gen.spec.ts",
+              "line": 16,
+              "column": 5
+            },
+            {
+              "title": "SQL injection in email field should not bypass authentication",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10224,
+                      "error": {
+                        "message": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"email\"]')\u001b[22m\n",
+                        "stack": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"email\"]')\u001b[22m\n\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/A/run2/gen.spec.ts:25:20",
+                        "location": {
+                          "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/A/run2/gen.spec.ts",
+                          "column": 20,
+                          "line": 25
+                        },
+                        "snippet": "  23 |\n  24 |     test('SQL injection in email field should not bypass authentication', async ({ page }) => {\n> 25 |         await page.fill('input[name=\"email\"]', \"admin' --\");\n     |                    ^\n  26 |         await page.fill('input[name=\"password\"]', 'password123');\n  27 |         await page.click('button[type=\"submit\"]');\n  28 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/A/run2/gen.spec.ts",
+                            "column": 20,
+                            "line": 25
+                          },
+                          "message": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"email\"]')\u001b[22m\n\n\n  23 |\n  24 |     test('SQL injection in email field should not bypass authentication', async ({ page }) => {\n> 25 |         await page.fill('input[name=\"email\"]', \"admin' --\");\n     |                    ^\n  26 |         await page.fill('input[name=\"password\"]', 'password123');\n  27 |         await page.click('button[type=\"submit\"]');\n  28 |\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/A/run2/gen.spec.ts:25:20"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-08T19:21:40.032Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/test-results/results_v2-login-A-run2-ge-8e9e7-d-not-bypass-authentication/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/A/run2/gen.spec.ts",
+                        "column": 20,
+                        "line": 25
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "417744e13480eee7b5fd-ae3c99159208ba46200f",
+              "file": "results_v2/login/A/run2/gen.spec.ts",
+              "line": 24,
+              "column": 5
+            },
+            {
+              "title": "known weak credentials should fail",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10215,
+                      "error": {
+                        "message": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"email\"]')\u001b[22m\n",
+                        "stack": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"email\"]')\u001b[22m\n\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/A/run2/gen.spec.ts:33:20",
+                        "location": {
+                          "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/A/run2/gen.spec.ts",
+                          "column": 20,
+                          "line": 33
+                        },
+                        "snippet": "  31 |\n  32 |     test('known weak credentials should fail', async ({ page }) => {\n> 33 |         await page.fill('input[name=\"email\"]', 'knownweakuser@example.com');\n     |                    ^\n  34 |         await page.fill('input[name=\"password\"]', 'weakpassword123');\n  35 |         await page.click('button[type=\"submit\"]');\n  36 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/A/run2/gen.spec.ts",
+                            "column": 20,
+                            "line": 33
+                          },
+                          "message": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"email\"]')\u001b[22m\n\n\n  31 |\n  32 |     test('known weak credentials should fail', async ({ page }) => {\n> 33 |         await page.fill('input[name=\"email\"]', 'knownweakuser@example.com');\n     |                    ^\n  34 |         await page.fill('input[name=\"password\"]', 'weakpassword123');\n  35 |         await page.click('button[type=\"submit\"]');\n  36 |\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/A/run2/gen.spec.ts:33:20"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-08T19:21:50.509Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/test-results/results_v2-login-A-run2-ge-3c6e2-eak-credentials-should-fail/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/A/run2/gen.spec.ts",
+                        "column": 20,
+                        "line": 33
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "417744e13480eee7b5fd-eddc563537e1d51a808f",
+              "file": "results_v2/login/A/run2/gen.spec.ts",
+              "line": 32,
+              "column": 5
+            },
+            {
+              "title": "two-factor authentication enabled should require TOTP code",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10224,
+                      "error": {
+                        "message": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"email\"]')\u001b[22m\n",
+                        "stack": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"email\"]')\u001b[22m\n\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/A/run2/gen.spec.ts:41:20",
+                        "location": {
+                          "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/A/run2/gen.spec.ts",
+                          "column": 20,
+                          "line": 41
+                        },
+                        "snippet": "  39 |\n  40 |     test('two-factor authentication enabled should require TOTP code', async ({ page }) => {\n> 41 |         await page.fill('input[name=\"email\"]', '2fa@example.com');\n     |                    ^\n  42 |         await page.fill('input[name=\"password\"]', '2faPassword123');\n  43 |         await page.click('button[type=\"submit\"]');\n  44 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/A/run2/gen.spec.ts",
+                            "column": 20,
+                            "line": 41
+                          },
+                          "message": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"email\"]')\u001b[22m\n\n\n  39 |\n  40 |     test('two-factor authentication enabled should require TOTP code', async ({ page }) => {\n> 41 |         await page.fill('input[name=\"email\"]', '2fa@example.com');\n     |                    ^\n  42 |         await page.fill('input[name=\"password\"]', '2faPassword123');\n  43 |         await page.click('button[type=\"submit\"]');\n  44 |\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/A/run2/gen.spec.ts:41:20"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-08T19:22:00.982Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/test-results/results_v2-login-A-run2-ge-d292b-ed-should-require-TOTP-code/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/A/run2/gen.spec.ts",
+                        "column": 20,
+                        "line": 41
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "417744e13480eee7b5fd-3f4b56bfeeed4cff9e59",
+              "file": "results_v2/login/A/run2/gen.spec.ts",
+              "line": 40,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-08T19:21:18.851Z",
+    "duration": 52462.872,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 5,
+    "flaky": 0
+  }
+}

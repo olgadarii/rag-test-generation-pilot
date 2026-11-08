@@ -1,0 +1,36 @@
+{
+  "story": "search",
+  "condition": "B_auto",
+  "run": 2,
+  "seed": 2007,
+  "contextFiles": [
+    "test/cypress/e2e/search.spec.ts"
+  ],
+  "promptTokens": 1362,
+  "outputTokens": 347,
+  "genSeconds": 17.511298084,
+  "testsTotal": 3,
+  "testsPassed": 0,
+  "topErrors": [],
+  "tests": [
+    {
+      "title": "search query should return matching products",
+      "status": "failed",
+      "error": "Error: expect(locator).toHaveCount(expected) failed\n\nLocator:  locator('.product')\nExpected: 1\nReceived: 30\nTimeout:  5000ms\n\nCall log:\n  - Expect \"toHaveCount\" with timeout 5000ms\n  - waiting for locator('.product')\n    14 × locator resolved to 30 elements\n       - unexpected value \"30\"\n",
+      "category": "selector_not_found"
+    },
+    {
+      "title": "search field must resist reflected cross-site scripting",
+      "status": "failed",
+      "error": "TypeError: expect(...).not.toHaveDialog is not a function",
+      "category": "api_or_syntax_error"
+    },
+    {
+      "title": "search field must resist reflected cross-site scripting (Bonus Payload)",
+      "status": "failed",
+      "error": "TypeError: expect(...).not.toHaveDialog is not a function",
+      "category": "api_or_syntax_error"
+    }
+  ],
+  "runCategory": null
+}

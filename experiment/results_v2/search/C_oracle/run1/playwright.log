@@ -1,0 +1,75 @@
+
+Running 3 tests using 1 worker
+
+[1/3] results_v2/search/C_oracle/run1/gen.spec.ts:8:3 › /#/search › search query should return matching products
+  1) results_v2/search/C_oracle/run1/gen.spec.ts:8:3 › /#/search › search query should return matching products 
+
+    Error: locator.fill: Error: Element is not an <input>, <textarea>, <select> or [contenteditable] and does not have a role allowing [aria-readonly]
+    Call log:
+      - waiting for locator('#searchQuery')
+        - locator resolved to <app-mat-search-bar id="searchQuery" _nghost-ng-c1668053465="" _ngcontent-ng-c1731522247="" aria-label="Click to search">…</app-mat-search-bar>
+        - fill("test product")
+      - attempting fill action
+        - waiting for element to be visible, enabled and editable
+
+
+       8 |   test('search query should return matching products', async ({ page }) => {
+       9 |     const searchQuery = 'test product'
+    > 10 |     await page.locator('#searchQuery').fill(searchQuery)
+         |                                        ^
+      11 |     await page.locator('app-mat-search-bar input').press('Enter')
+      12 |
+      13 |     const expectedProducts = await page.locator('.product-list .product')
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_oracle/run1/gen.spec.ts:10:40
+
+    Error Context: test-results/results_v2-search-C_oracle-6c547-ld-return-matching-products/error-context.md
+
+
+[2/3] results_v2/search/C_oracle/run1/gen.spec.ts:17:3 › /#/search › search field must resist reflected XSS attacks
+  2) results_v2/search/C_oracle/run1/gen.spec.ts:17:3 › /#/search › search field must resist reflected XSS attacks 
+
+    Error: locator.fill: Error: Element is not an <input>, <textarea>, <select> or [contenteditable] and does not have a role allowing [aria-readonly]
+    Call log:
+      - waiting for locator('#searchQuery')
+        - locator resolved to <app-mat-search-bar id="searchQuery" _nghost-ng-c1668053465="" _ngcontent-ng-c1731522247="" aria-label="Click to search">…</app-mat-search-bar>
+        - fill("<iframe src="javascript:alert(`xss`)">")
+      - attempting fill action
+        - waiting for element to be visible, enabled and editable
+
+
+      17 |   test('search field must resist reflected XSS attacks', async ({ page }) => {
+      18 |     const xssPayload = '<iframe src="javascript:alert(`xss`)">'
+    > 19 |     await page.locator('#searchQuery').fill(xssPayload)
+         |                                        ^
+      20 |     await page.locator('app-mat-search-bar input').press('Enter')
+      21 |
+      22 |     await page.waitForSelector('.alert', { state: 'hidden' })
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_oracle/run1/gen.spec.ts:19:40
+
+    Error Context: test-results/results_v2-search-C_oracle-5944b-esist-reflected-XSS-attacks/error-context.md
+
+
+[3/3] results_v2/search/C_oracle/run1/gen.spec.ts:27:3 › /rest/products/search › query param in product search endpoint should not return sensitive information
+  3) results_v2/search/C_oracle/run1/gen.spec.ts:27:3 › /rest/products/search › query param in product search endpoint should not return sensitive information 
+
+    Error: expect(received).toBeTruthy()
+
+    Received: false
+
+      28 |     const query = "'--"
+      29 |     const response = await request.get(`/rest/products/search?q=${query}`)
+    > 30 |     expect(response.ok()).toBeTruthy()
+         |                           ^
+      31 |     const body = await response.json()
+      32 |     expect(body.data).not.toContain('password')
+      33 |   })
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_oracle/run1/gen.spec.ts:30:27
+
+    Error Context: test-results/results_v2-search-C_oracle-20a26-eturn-sensitive-information/error-context.md
+
+
+  3 failed
+    results_v2/search/C_oracle/run1/gen.spec.ts:8:3 › /#/search › search query should return matching products 
+    results_v2/search/C_oracle/run1/gen.spec.ts:17:3 › /#/search › search field must resist reflected XSS attacks 
+    results_v2/search/C_oracle/run1/gen.spec.ts:27:3 › /rest/products/search › query param in product search endpoint should not return sensitive information 
+

@@ -1,0 +1,29 @@
+{
+  "login": {
+    "title": "User login",
+    "story": "As a customer I want to log in with my email and password so that I can access my account.",
+    "acceptance": [
+      "The login page accepts valid credentials and rejects invalid ones.",
+      "Security regression: the suite verifies each known authentication-bypass vector of the application (SQL injection in the email field, known leaked or weak credentials) and asserts whether the bypass succeeds.",
+      "Accounts with two-factor authentication enabled require a valid TOTP code after the password step."
+    ],
+    "oracle": {
+      "B": ["test/cypress/e2e/login.spec.ts"],
+      "C": ["test/cypress/e2e/login.spec.ts", "test/cypress/support/setup.ts"]
+    },
+    "target": "test/cypress/e2e/login.spec.ts"
+  },
+  "search": {
+    "title": "Product search",
+    "story": "As a customer I want to search for products by name so that I can find what I want to buy.",
+    "acceptance": [
+      "A search returns the matching products.",
+      "Non-functional (security): the search field must not execute injected script content, i.e. it must resist reflected cross-site scripting."
+    ],
+    "oracle": {
+      "B": ["test/cypress/e2e/search.spec.ts"],
+      "C": ["test/cypress/e2e/search.spec.ts", "test/cypress/support/setup.ts"]
+    },
+    "target": "test/cypress/e2e/search.spec.ts"
+  }
+}

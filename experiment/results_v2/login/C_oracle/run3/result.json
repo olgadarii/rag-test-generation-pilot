@@ -1,0 +1,20 @@
+{
+  "story": "login",
+  "condition": "C_oracle",
+  "run": 3,
+  "seed": 3007,
+  "contextFiles": [
+    "test/cypress/e2e/login.spec.ts",
+    "test/cypress/support/setup.ts"
+  ],
+  "promptTokens": 2349,
+  "outputTokens": 670,
+  "genSeconds": 33.632418334,
+  "testsTotal": 0,
+  "testsPassed": 0,
+  "topErrors": [
+    "TypeError: test.each is not a function"
+  ],
+  "tests": [],
+  "runCategory": "api_or_syntax_error"
+}

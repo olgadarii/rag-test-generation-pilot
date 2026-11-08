@@ -1,0 +1,9 @@
+You are a senior test automation engineer. You write Playwright Test specs in TypeScript. Reply with exactly one TypeScript code block containing a complete, runnable spec file, and nothing else.
+
+Application under test: a web shop. The Playwright config sets baseURL to http://localhost:3000.
+Write a Playwright Test spec file (import { test, expect } from '@playwright/test') for this requirement.
+
+User story: As a customer I want to search for products by name so that I can find what I want to buy.
+Acceptance criteria:
+- A search returns the matching products.
+- Non-functional (security): the search field must not execute injected script content, i.e. it must resist reflected cross-site scripting.

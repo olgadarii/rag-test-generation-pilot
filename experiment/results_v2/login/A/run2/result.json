@@ -1,0 +1,46 @@
+{
+  "story": "login",
+  "condition": "A",
+  "run": 2,
+  "seed": 2007,
+  "contextFiles": [],
+  "promptTokens": 192,
+  "outputTokens": 438,
+  "genSeconds": 21.981399542,
+  "testsTotal": 5,
+  "testsPassed": 0,
+  "topErrors": [],
+  "tests": [
+    {
+      "title": "valid credentials should log in successfully",
+      "status": "failed",
+      "error": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('input[name=\"email\"]')\n",
+      "category": "selector_not_found"
+    },
+    {
+      "title": "invalid credentials should fail to log in",
+      "status": "failed",
+      "error": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('input[name=\"email\"]')\n",
+      "category": "selector_not_found"
+    },
+    {
+      "title": "SQL injection in email field should not bypass authentication",
+      "status": "failed",
+      "error": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('input[name=\"email\"]')\n",
+      "category": "selector_not_found"
+    },
+    {
+      "title": "known weak credentials should fail",
+      "status": "failed",
+      "error": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('input[name=\"email\"]')\n",
+      "category": "selector_not_found"
+    },
+    {
+      "title": "two-factor authentication enabled should require TOTP code",
+      "status": "failed",
+      "error": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('input[name=\"email\"]')\n",
+      "category": "selector_not_found"
+    }
+  ],
+  "runCategory": null
+}

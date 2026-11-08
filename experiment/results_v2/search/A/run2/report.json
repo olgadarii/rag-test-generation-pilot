@@ -1,0 +1,219 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/26.8.1/bin/node",
+      "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/node_modules/.bin/playwright",
+      "test",
+      "results_v2/search/A/run2/gen.spec.ts",
+      "--config",
+      "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/playwright.config.mjs"
+    ],
+    "configFile": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/playwright.config.mjs",
+    "rootDir": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment",
+        "testIgnore": [],
+        "testMatch": [
+          "/gen\\.spec\\.ts$/"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "results_v2/search/A/run2/gen.spec.ts",
+      "file": "results_v2/search/A/run2/gen.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Product Search",
+          "file": "results_v2/search/A/run2/gen.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should search for products by name and return matching products",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10411,
+                      "error": {
+                        "message": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"search\"]')\u001b[22m\n",
+                        "stack": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"search\"]')\u001b[22m\n\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/A/run2/gen.spec.ts:9:20",
+                        "location": {
+                          "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/A/run2/gen.spec.ts",
+                          "column": 20,
+                          "line": 9
+                        },
+                        "snippet": "   7 |\n   8 |     test('should search for products by name and return matching products', async ({ page }) => {\n>  9 |         await page.fill('input[name=\"search\"]', 'laptop');\n     |                    ^\n  10 |         await page.click('button[type=\"submit\"]');\n  11 |\n  12 |         const products = await page.locator('.product-list .product');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/A/run2/gen.spec.ts",
+                            "column": 20,
+                            "line": 9
+                          },
+                          "message": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"search\"]')\u001b[22m\n\n\n   7 |\n   8 |     test('should search for products by name and return matching products', async ({ page }) => {\n>  9 |         await page.fill('input[name=\"search\"]', 'laptop');\n     |                    ^\n  10 |         await page.click('button[type=\"submit\"]');\n  11 |\n  12 |         const products = await page.locator('.product-list .product');\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/A/run2/gen.spec.ts:9:20"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-08T19:30:06.632Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/test-results/results_v2-search-A-run2-g-4b830-nd-return-matching-products/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/A/run2/gen.spec.ts",
+                        "column": 20,
+                        "line": 9
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "30a57bbb3b073538a060-b6f282a1a7abef0f3132",
+              "file": "results_v2/search/A/run2/gen.spec.ts",
+              "line": 8,
+              "column": 5
+            },
+            {
+              "title": "search field should not execute injected script content",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10218,
+                      "error": {
+                        "message": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"search\"]')\u001b[22m\n",
+                        "stack": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"search\"]')\u001b[22m\n\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/A/run2/gen.spec.ts:18:20",
+                        "location": {
+                          "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/A/run2/gen.spec.ts",
+                          "column": 20,
+                          "line": 18
+                        },
+                        "snippet": "  16 |     test('search field should not execute injected script content', async ({ page }) => {\n  17 |         const payload = `<script>alert('XSS')</script>`;\n> 18 |         await page.fill('input[name=\"search\"]', payload);\n     |                    ^\n  19 |         await page.click('button[type=\"submit\"]');\n  20 |\n  21 |         const alertMessage = await page.evaluate(() => window.alert === undefined);"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/A/run2/gen.spec.ts",
+                            "column": 20,
+                            "line": 18
+                          },
+                          "message": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"search\"]')\u001b[22m\n\n\n  16 |     test('search field should not execute injected script content', async ({ page }) => {\n  17 |         const payload = `<script>alert('XSS')</script>`;\n> 18 |         await page.fill('input[name=\"search\"]', payload);\n     |                    ^\n  19 |         await page.click('button[type=\"submit\"]');\n  20 |\n  21 |         const alertMessage = await page.evaluate(() => window.alert === undefined);\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/A/run2/gen.spec.ts:18:20"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-08T19:30:17.418Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/test-results/results_v2-search-A-run2-g-05111-ute-injected-script-content/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/A/run2/gen.spec.ts",
+                        "column": 20,
+                        "line": 18
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "30a57bbb3b073538a060-33877d174fbe01ee866a",
+              "file": "results_v2/search/A/run2/gen.spec.ts",
+              "line": 16,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-08T19:30:06.416Z",
+    "duration": 21306.218,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

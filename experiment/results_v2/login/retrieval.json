@@ -1,0 +1,59 @@
+{
+  "query": "As a customer I want to log in with my email and password so that I can access my account.\nThe login page accepts valid credentials and rejects invalid ones.\nSecurity regression: the suite verifies each known authentication-bypass vector of the application (SQL injection in the email field, known leaked or weak credentials) and asserts whether the bypass succeeds.\nAccounts with two-factor authentication enabled require a valid TOTP code after the password step.",
+  "top10": [
+    {
+      "file": "test/cypress/e2e/totpSetup.spec.ts",
+      "score": 0.5827
+    },
+    {
+      "file": "test/cypress/e2e/register.spec.ts",
+      "score": 0.5608
+    },
+    {
+      "file": "test/cypress/e2e/login.spec.ts",
+      "score": 0.5538
+    },
+    {
+      "file": "test/cypress/e2e/dataExport.spec.ts",
+      "score": 0.5454
+    },
+    {
+      "file": "test/cypress/support/commands.ts",
+      "score": 0.5425
+    },
+    {
+      "file": "test/cypress/e2e/administration.spec.ts",
+      "score": 0.5326
+    },
+    {
+      "file": "test/cypress/e2e/deluxe.spec.ts",
+      "score": 0.5285
+    },
+    {
+      "file": "test/cypress/e2e/passwordHashLeak.spec.ts",
+      "score": 0.5256
+    },
+    {
+      "file": "test/cypress/support/e2e.ts",
+      "score": 0.5252
+    },
+    {
+      "file": "test/cypress/e2e/changePassword.spec.ts",
+      "score": 0.5224
+    }
+  ],
+  "targetRank": 3,
+  "fixtureRank": 33,
+  "top1IsTarget": false,
+  "expansion": {
+    "test/cypress/support/e2e.ts": "implicit: supportFile in cypress.config.ts, loaded before every spec",
+    "test/cypress/support/commands.ts": "defines cy.login() used in totpSetup.spec.ts",
+    "test/cypress/support/setup.ts": "imported by e2e.ts"
+  },
+  "serverSideTasks": [
+    {
+      "task": "GenerateAuthenticator",
+      "handler": "return generateSync({ secret: inputString })"
+    }
+  ]
+}

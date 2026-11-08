@@ -1,0 +1,219 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/26.8.1/bin/node",
+      "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/node_modules/.bin/playwright",
+      "test",
+      "results_v2/search/C_auto/run2/gen.spec.ts",
+      "--config",
+      "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/playwright.config.mjs"
+    ],
+    "configFile": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/playwright.config.mjs",
+    "rootDir": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment",
+        "testIgnore": [],
+        "testMatch": [
+          "/gen\\.spec\\.ts$/"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "results_v2/search/C_auto/run2/gen.spec.ts",
+      "file": "results_v2/search/C_auto/run2/gen.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "/#/search",
+          "file": "results_v2/search/C_auto/run2/gen.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "search query should return matching products",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 225,
+                      "error": {
+                        "message": "Error: locator.fill: Error: Element is not an <input>, <textarea>, <select> or [contenteditable] and does not have a role allowing [aria-readonly]\nCall log:\n\u001b[2m  - waiting for locator('#searchQuery')\u001b[22m\n\u001b[2m    - locator resolved to <app-mat-search-bar id=\"searchQuery\" _nghost-ng-c1668053465=\"\" _ngcontent-ng-c1731522247=\"\" aria-label=\"Click to search\">…</app-mat-search-bar>\u001b[22m\n\u001b[2m    - fill(\"example product\")\u001b[22m\n\u001b[2m  - attempting fill action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and editable\u001b[22m\n",
+                        "stack": "Error: locator.fill: Error: Element is not an <input>, <textarea>, <select> or [contenteditable] and does not have a role allowing [aria-readonly]\nCall log:\n\u001b[2m  - waiting for locator('#searchQuery')\u001b[22m\n\u001b[2m    - locator resolved to <app-mat-search-bar id=\"searchQuery\" _nghost-ng-c1668053465=\"\" _ngcontent-ng-c1731522247=\"\" aria-label=\"Click to search\">…</app-mat-search-bar>\u001b[22m\n\u001b[2m    - fill(\"example product\")\u001b[22m\n\u001b[2m  - attempting fill action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and editable\u001b[22m\n\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_auto/run2/gen.spec.ts:10:40",
+                        "location": {
+                          "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_auto/run2/gen.spec.ts",
+                          "column": 40,
+                          "line": 10
+                        },
+                        "snippet": "   8 |   test('search query should return matching products', async ({ page }) => {\n   9 |     const searchQuery = 'example product'\n> 10 |     await page.locator('#searchQuery').fill(searchQuery)\n     |                                        ^\n  11 |     await page.locator('app-mat-search-bar input').press('Enter')\n  12 |     const products = await page.locator('.product-card').count()\n  13 |     expect(products).toBeGreaterThan(0)"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_auto/run2/gen.spec.ts",
+                            "column": 40,
+                            "line": 10
+                          },
+                          "message": "Error: locator.fill: Error: Element is not an <input>, <textarea>, <select> or [contenteditable] and does not have a role allowing [aria-readonly]\nCall log:\n\u001b[2m  - waiting for locator('#searchQuery')\u001b[22m\n\u001b[2m    - locator resolved to <app-mat-search-bar id=\"searchQuery\" _nghost-ng-c1668053465=\"\" _ngcontent-ng-c1731522247=\"\" aria-label=\"Click to search\">…</app-mat-search-bar>\u001b[22m\n\u001b[2m    - fill(\"example product\")\u001b[22m\n\u001b[2m  - attempting fill action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and editable\u001b[22m\n\n\n   8 |   test('search query should return matching products', async ({ page }) => {\n   9 |     const searchQuery = 'example product'\n> 10 |     await page.locator('#searchQuery').fill(searchQuery)\n     |                                        ^\n  11 |     await page.locator('app-mat-search-bar input').press('Enter')\n  12 |     const products = await page.locator('.product-card').count()\n  13 |     expect(products).toBeGreaterThan(0)\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_auto/run2/gen.spec.ts:10:40"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-08T19:31:19.382Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/test-results/results_v2-search-C_auto-r-f4f0f-ld-return-matching-products/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_auto/run2/gen.spec.ts",
+                        "column": 40,
+                        "line": 10
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "7ef8defe5ebeade910bb-9c9f207bf98227d719c2",
+              "file": "results_v2/search/C_auto/run2/gen.spec.ts",
+              "line": 8,
+              "column": 3
+            },
+            {
+              "title": "search field must resist reflected cross-site scripting",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 208,
+                      "error": {
+                        "message": "Error: locator.fill: Error: Element is not an <input>, <textarea>, <select> or [contenteditable] and does not have a role allowing [aria-readonly]\nCall log:\n\u001b[2m  - waiting for locator('#searchQuery')\u001b[22m\n\u001b[2m    - locator resolved to <app-mat-search-bar id=\"searchQuery\" _nghost-ng-c1668053465=\"\" _ngcontent-ng-c1731522247=\"\" aria-label=\"Click to search\">…</app-mat-search-bar>\u001b[22m\n\u001b[2m    - fill(\"<iframe src=\"javascript:alert(`xss`)\">\")\u001b[22m\n\u001b[2m  - attempting fill action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and editable\u001b[22m\n",
+                        "stack": "Error: locator.fill: Error: Element is not an <input>, <textarea>, <select> or [contenteditable] and does not have a role allowing [aria-readonly]\nCall log:\n\u001b[2m  - waiting for locator('#searchQuery')\u001b[22m\n\u001b[2m    - locator resolved to <app-mat-search-bar id=\"searchQuery\" _nghost-ng-c1668053465=\"\" _ngcontent-ng-c1731522247=\"\" aria-label=\"Click to search\">…</app-mat-search-bar>\u001b[22m\n\u001b[2m    - fill(\"<iframe src=\"javascript:alert(`xss`)\">\")\u001b[22m\n\u001b[2m  - attempting fill action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and editable\u001b[22m\n\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_auto/run2/gen.spec.ts:18:40",
+                        "location": {
+                          "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_auto/run2/gen.spec.ts",
+                          "column": 40,
+                          "line": 18
+                        },
+                        "snippet": "  16 |   test('search field must resist reflected cross-site scripting', async ({ page }) => {\n  17 |     const xssPayload = '<iframe src=\"javascript:alert(`xss`)\">'\n> 18 |     await page.locator('#searchQuery').fill(xssPayload)\n     |                                        ^\n  19 |     await page.locator('app-mat-search-bar input').press('Enter')\n  20 |     await page.waitForSelector('.alert', { state: 'hidden' })\n  21 |     expect(await page.evaluate(() => window.alert)).not.toHaveBeenCalled()"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_auto/run2/gen.spec.ts",
+                            "column": 40,
+                            "line": 18
+                          },
+                          "message": "Error: locator.fill: Error: Element is not an <input>, <textarea>, <select> or [contenteditable] and does not have a role allowing [aria-readonly]\nCall log:\n\u001b[2m  - waiting for locator('#searchQuery')\u001b[22m\n\u001b[2m    - locator resolved to <app-mat-search-bar id=\"searchQuery\" _nghost-ng-c1668053465=\"\" _ngcontent-ng-c1731522247=\"\" aria-label=\"Click to search\">…</app-mat-search-bar>\u001b[22m\n\u001b[2m    - fill(\"<iframe src=\"javascript:alert(`xss`)\">\")\u001b[22m\n\u001b[2m  - attempting fill action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and editable\u001b[22m\n\n\n  16 |   test('search field must resist reflected cross-site scripting', async ({ page }) => {\n  17 |     const xssPayload = '<iframe src=\"javascript:alert(`xss`)\">'\n> 18 |     await page.locator('#searchQuery').fill(xssPayload)\n     |                                        ^\n  19 |     await page.locator('app-mat-search-bar input').press('Enter')\n  20 |     await page.waitForSelector('.alert', { state: 'hidden' })\n  21 |     expect(await page.evaluate(() => window.alert)).not.toHaveBeenCalled()\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_auto/run2/gen.spec.ts:18:40"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-08T19:31:19.851Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/test-results/results_v2-search-C_auto-r-256aa-lected-cross-site-scripting/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_auto/run2/gen.spec.ts",
+                        "column": 40,
+                        "line": 18
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "7ef8defe5ebeade910bb-076d6c6e2f52d3e2c9e9",
+              "file": "results_v2/search/C_auto/run2/gen.spec.ts",
+              "line": 16,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-08T19:31:19.173Z",
+    "duration": 966.425,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

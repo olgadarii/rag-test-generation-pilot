@@ -1,0 +1,60 @@
+{
+  "story": "search",
+  "condition": "B_oracle",
+  "run": 1,
+  "seed": 1007,
+  "contextFiles": [
+    "test/cypress/e2e/search.spec.ts"
+  ],
+  "promptTokens": 1362,
+  "outputTokens": 781,
+  "genSeconds": 40.629094292,
+  "testsTotal": 7,
+  "testsPassed": 0,
+  "topErrors": [],
+  "tests": [
+    {
+      "title": "search query should return matching products",
+      "status": "failed",
+      "error": "Error: locator.fill: Error: Element is not an <input>, <textarea>, <select> or [contenteditable] and does not have a role allowing [aria-readonly]\nCall log:\n  - waiting for locator('#searchQuery')\n    - locator resolved to <app-mat-search-bar id=\"searchQuery\" _nghost-ng-c1668053465=\"\" _ngcontent-ng-c1731522247=\"\" aria-label=\"Click to search\">…</app-mat-search-bar>\n    - fill(\"test product\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
+      "category": "selector_not_found"
+    },
+    {
+      "title": "search field must resist reflected XSS attacks",
+      "status": "failed",
+      "error": "Error: locator.fill: Error: Element is not an <input>, <textarea>, <select> or [contenteditable] and does not have a role allowing [aria-readonly]\nCall log:\n  - waiting for locator('#searchQuery')\n    - locator resolved to <app-mat-search-bar id=\"searchQuery\" _nghost-ng-c1668053465=\"\" _ngcontent-ng-c1731522247=\"\" aria-label=\"Click to search\">…</app-mat-search-bar>\n    - fill(\"<script>alert(\"xss\")</script>\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
+      "category": "selector_not_found"
+    },
+    {
+      "title": "search query should be susceptible to reflected XSS attacks (Bonus Payload)",
+      "status": "failed",
+      "error": "Error: locator.fill: Error: Element is not an <input>, <textarea>, <select> or [contenteditable] and does not have a role allowing [aria-readonly]\nCall log:\n  - waiting for locator('#searchQuery')\n    - locator resolved to <app-mat-search-bar id=\"searchQuery\" _nghost-ng-c1668053465=\"\" _ngcontent-ng-c1731522247=\"\" aria-label=\"Click to search\">…</app-mat-search-bar>\n    - fill(\"<iframe width=\"100%\" height=\"166\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/771984076&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true\"></iframe>\")\n  - attempting fill action\n    - waiting for element to be visible, enabled and editable\n",
+      "category": "selector_not_found"
+    },
+    {
+      "title": "should return matching products",
+      "status": "failed",
+      "error": "TypeError: response.jsonValue is not a function",
+      "category": "api_or_syntax_error"
+    },
+    {
+      "title": "should resist SQL injection attacks",
+      "status": "failed",
+      "error": "ReferenceError: page is not defined",
+      "category": "other"
+    },
+    {
+      "title": "should not reveal logically deleted products on SQL injection attack",
+      "status": "failed",
+      "error": "ReferenceError: page is not defined",
+      "category": "other"
+    },
+    {
+      "title": "should be able to place Christmas product into shopping card by id",
+      "status": "failed",
+      "error": "ReferenceError: page is not defined",
+      "category": "other"
+    }
+  ],
+  "runCategory": null
+}

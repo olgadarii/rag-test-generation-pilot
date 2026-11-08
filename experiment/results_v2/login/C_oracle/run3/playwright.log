@@ -1,0 +1,15 @@
+TypeError: test.each is not a function
+
+   at results_v2/login/C_oracle/run3/gen.spec.ts:15
+
+  13 |   });
+  14 |
+> 15 |   test.each([
+     |        ^
+  16 |     ['\' or 1=1--', 'admin@localhost', 'a'],
+  17 |     ['admin@localhost\'--', 'a'],
+  18 |     ['jim@localhost\'--', 'a'],
+    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/C_oracle/run3/gen.spec.ts:15:8
+    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/C_oracle/run3/gen.spec.ts:7:6
+
+

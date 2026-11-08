@@ -1,0 +1,109 @@
+{
+  "story": "login",
+  "condition": "C_oracle",
+  "run": 1,
+  "seed": 1007,
+  "contextFiles": [
+    "test/cypress/e2e/login.spec.ts",
+    "test/cypress/support/setup.ts"
+  ],
+  "promptTokens": 2349,
+  "outputTokens": 1733,
+  "genSeconds": 95.66854225,
+  "testsTotal": 15,
+  "testsPassed": 0,
+  "topErrors": [],
+  "tests": [
+    {
+      "title": "should log in Admin with SQLI attack on email field using \"' or 1=1--\"",
+      "status": "failed",
+      "error": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('#loginButton')\n    - locator resolved to <button type=\"submit\" color=\"primary\" id=\"loginButton\" aria-label=\"Login\" mat-raised-button=\"\" _ngcontent-ng-c347502026=\"\" mat-ripple-loader-uninitialized=\"\" mat-ripple-loader-class-name=\"mat-mdc-button-ripple\" class=\"mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary\">…</button>\n  - attempting click action\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - performing click action\n    - <span class=\"mat-mdc-button-touch-target\"></span> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\n  - retrying click action\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <app-welcome-banner _nghost-ng-c3578434029=\"\" class=\"mat-mdc-dialog-component-host\">…</app-welcome-banner> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\n  - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    19 × waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\n     - retrying click action\n       - waiting 500ms\n",
+      "category": "overlay_blocked"
+    },
+    {
+      "title": "should log in Admin with SQLI attack on email field using \"admin@<juice-sh.op>'--\"",
+      "status": "failed",
+      "error": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation",
+      "category": "other"
+    },
+    {
+      "title": "should log in Jim with SQLI attack on email field using \"jim@<juice-sh.op>'--\"",
+      "status": "failed",
+      "error": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation",
+      "category": "other"
+    },
+    {
+      "title": "should log in Bender with SQLI attack on email field using \"bender@<juice-sh.op>'--\"",
+      "status": "failed",
+      "error": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation",
+      "category": "other"
+    },
+    {
+      "title": "should be able to log in with original (weak) admin credentials",
+      "status": "failed",
+      "error": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation",
+      "category": "other"
+    },
+    {
+      "title": "should be able to log in with original support-team credentials",
+      "status": "failed",
+      "error": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation",
+      "category": "other"
+    },
+    {
+      "title": "should be able to log in with original MC SafeSearch credentials",
+      "status": "failed",
+      "error": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation",
+      "category": "other"
+    },
+    {
+      "title": "should be able to log in with original Amy credentials",
+      "status": "failed",
+      "error": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation",
+      "category": "other"
+    },
+    {
+      "title": "should be able to log in with original Jannik credentials",
+      "status": "failed",
+      "error": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation",
+      "category": "other"
+    },
+    {
+      "title": "should be able to log into a existing 2fa protected account given the right token",
+      "status": "failed",
+      "error": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation",
+      "category": "other"
+    },
+    {
+      "title": "should be able to log in as bjoern.kimminich@gmail.com with base64-encoded email as password",
+      "status": "failed",
+      "error": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('#loginButton')\n    - locator resolved to <button type=\"submit\" color=\"primary\" id=\"loginButton\" aria-label=\"Login\" mat-raised-button=\"\" _ngcontent-ng-c347502026=\"\" mat-ripple-loader-uninitialized=\"\" mat-ripple-loader-class-name=\"mat-mdc-button-ripple\" class=\"mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary\">…</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <app-welcome-banner _nghost-ng-c3578434029=\"\" class=\"mat-mdc-dialog-component-host\">…</app-welcome-banner> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    19 × waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\n     - retrying click action\n       - waiting 500ms\n",
+      "category": "overlay_blocked"
+    },
+    {
+      "title": "should be able to log in as chris.pike@juice-sh.op by using \"' or deletedAt IS NOT NULL --\"",
+      "status": "failed",
+      "error": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('#loginButton')\n    - locator resolved to <button type=\"submit\" color=\"primary\" id=\"loginButton\" aria-label=\"Login\" mat-raised-button=\"\" _ngcontent-ng-c347502026=\"\" mat-ripple-loader-uninitialized=\"\" mat-ripple-loader-class-name=\"mat-mdc-button-ripple\" class=\"mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary\">…</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <app-welcome-banner _nghost-ng-c3578434029=\"\" class=\"mat-mdc-dialog-component-host\">…</app-welcome-banner> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    19 × waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\n     - retrying click action\n       - waiting 500ms\n",
+      "category": "overlay_blocked"
+    },
+    {
+      "title": "should be able to log in as chris.pike@juice-sh.op by using \"chris.pike@juice-sh.op' --\"",
+      "status": "failed",
+      "error": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation",
+      "category": "other"
+    },
+    {
+      "title": "should log in non-existing accountant user with SQLI attack on email field using UNION SELECT payload",
+      "status": "failed",
+      "error": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('#loginButton')\n    - locator resolved to <button type=\"submit\" color=\"primary\" id=\"loginButton\" aria-label=\"Login\" mat-raised-button=\"\" _ngcontent-ng-c347502026=\"\" mat-ripple-loader-uninitialized=\"\" mat-ripple-loader-class-name=\"mat-mdc-button-ripple\" class=\"mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary\">…</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <app-welcome-banner _nghost-ng-c3578434029=\"\" class=\"mat-mdc-dialog-component-host\">…</app-welcome-banner> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    19 × waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\n     - retrying click action\n       - waiting 500ms\n",
+      "category": "overlay_blocked"
+    },
+    {
+      "title": "should be able to log in with testing credentials that are leaked on client",
+      "status": "failed",
+      "error": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation",
+      "category": "other"
+    }
+  ],
+  "runCategory": null
+}

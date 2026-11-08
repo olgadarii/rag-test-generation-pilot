@@ -1,0 +1,48 @@
+{
+  "story": "login",
+  "condition": "B_auto",
+  "run": 2,
+  "seed": 2007,
+  "contextFiles": [
+    "test/cypress/e2e/totpSetup.spec.ts"
+  ],
+  "promptTokens": 602,
+  "outputTokens": 570,
+  "genSeconds": 29.71043575,
+  "testsTotal": 5,
+  "testsPassed": 0,
+  "topErrors": [],
+  "tests": [
+    {
+      "title": "valid credentials should log in successfully",
+      "status": "failed",
+      "error": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('#email')\n",
+      "category": "selector_not_found"
+    },
+    {
+      "title": "invalid credentials should not log in",
+      "status": "failed",
+      "error": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('#email')\n",
+      "category": "selector_not_found"
+    },
+    {
+      "title": "SQL injection in the email field should be rejected",
+      "status": "failed",
+      "error": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('#email')\n",
+      "category": "selector_not_found"
+    },
+    {
+      "title": "known leaked credentials should be rejected",
+      "status": "failed",
+      "error": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('#email')\n",
+      "category": "selector_not_found"
+    },
+    {
+      "title": "2FA enabled accounts require a valid TOTP code",
+      "status": "failed",
+      "error": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('#email')\n",
+      "category": "selector_not_found"
+    }
+  ],
+  "runCategory": null
+}

@@ -1,0 +1,219 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/26.8.1/bin/node",
+      "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/node_modules/.bin/playwright",
+      "test",
+      "results_v2/search/C_oracle/run3/gen.spec.ts",
+      "--config",
+      "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/playwright.config.mjs"
+    ],
+    "configFile": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/playwright.config.mjs",
+    "rootDir": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment",
+        "testIgnore": [],
+        "testMatch": [
+          "/gen\\.spec\\.ts$/"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "results_v2/search/C_oracle/run3/gen.spec.ts",
+      "file": "results_v2/search/C_oracle/run3/gen.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "/#/search",
+          "file": "results_v2/search/C_oracle/run3/gen.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "search query should return matching products",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 235,
+                      "error": {
+                        "message": "TypeError: products.map is not a function",
+                        "stack": "TypeError: products.map is not a function\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_oracle/run3/gen.spec.ts:14:41",
+                        "location": {
+                          "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_oracle/run3/gen.spec.ts",
+                          "column": 41,
+                          "line": 14
+                        },
+                        "snippet": "  12 |\n  13 |     const products = await page.locator('.product-item')\n> 14 |     const productNames = await products.map((product) => product.textContent())\n     |                                         ^\n  15 |     expect(productNames).toContain(searchQuery)\n  16 |   })\n  17 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_oracle/run3/gen.spec.ts",
+                            "column": 41,
+                            "line": 14
+                          },
+                          "message": "TypeError: products.map is not a function\n\n  12 |\n  13 |     const products = await page.locator('.product-item')\n> 14 |     const productNames = await products.map((product) => product.textContent())\n     |                                         ^\n  15 |     expect(productNames).toContain(searchQuery)\n  16 |   })\n  17 |\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_oracle/run3/gen.spec.ts:14:41"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-08T19:44:11.540Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/test-results/results_v2-search-C_oracle-6aa43-ld-return-matching-products/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_oracle/run3/gen.spec.ts",
+                        "column": 41,
+                        "line": 14
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "b28d50fa86d849dd8c8b-acaac059cfa2f315402c",
+              "file": "results_v2/search/C_oracle/run3/gen.spec.ts",
+              "line": 8,
+              "column": 3
+            },
+            {
+              "title": "search field must resist reflected cross-site scripting",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 223,
+                      "error": {
+                        "message": "Error: page.waitForSelector: state: expected one of (attached|detached|visible|hidden)",
+                        "stack": "Error: page.waitForSelector: state: expected one of (attached|detached|visible|hidden)\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_oracle/run3/gen.spec.ts:23:16",
+                        "location": {
+                          "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_oracle/run3/gen.spec.ts",
+                          "column": 16,
+                          "line": 23
+                        },
+                        "snippet": "  21 |     await page.press('#searchQuery', 'Enter')\n  22 |\n> 23 |     await page.waitForSelector('alert(xss)', { timeout: 10000, state: 'none' })\n     |                ^\n  24 |   })\n  25 | })\n  26 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_oracle/run3/gen.spec.ts",
+                            "column": 16,
+                            "line": 23
+                          },
+                          "message": "Error: page.waitForSelector: state: expected one of (attached|detached|visible|hidden)\n\n  21 |     await page.press('#searchQuery', 'Enter')\n  22 |\n> 23 |     await page.waitForSelector('alert(xss)', { timeout: 10000, state: 'none' })\n     |                ^\n  24 |   })\n  25 | })\n  26 |\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_oracle/run3/gen.spec.ts:23:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-08T19:44:12.019Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/test-results/results_v2-search-C_oracle-29739-lected-cross-site-scripting/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_oracle/run3/gen.spec.ts",
+                        "column": 16,
+                        "line": 23
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "b28d50fa86d849dd8c8b-6958b31b1bef9d969b72",
+              "file": "results_v2/search/C_oracle/run3/gen.spec.ts",
+              "line": 18,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-08T19:44:11.330Z",
+    "duration": 991.5069999999998,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

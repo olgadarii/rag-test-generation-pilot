@@ -1,0 +1,33 @@
+{
+  "story": "search",
+  "condition": "C_auto",
+  "run": 3,
+  "seed": 3007,
+  "contextFiles": [
+    "test/cypress/e2e/search.spec.ts",
+    "test/cypress/support/e2e.ts",
+    "test/cypress/support/commands.ts",
+    "test/cypress/support/setup.ts"
+  ],
+  "promptTokens": 2052,
+  "outputTokens": 192,
+  "genSeconds": 13.226214708,
+  "testsTotal": 2,
+  "testsPassed": 0,
+  "topErrors": [],
+  "tests": [
+    {
+      "title": "search query should return matching products",
+      "status": "failed",
+      "error": "Error: expect(received).toBeGreaterThan(expected)\n\nExpected: > 0\nReceived:   0",
+      "category": "assertion_failed"
+    },
+    {
+      "title": "search field must resist reflected cross-site scripting",
+      "status": "failed",
+      "error": "TypeError: expect(...).not.toHaveAlert is not a function",
+      "category": "api_or_syntax_error"
+    }
+  ],
+  "runCategory": null
+}

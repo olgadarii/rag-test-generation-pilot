@@ -1,0 +1,26 @@
+
+Running 1 test using 1 worker
+
+[1/1] results_v2/search/A/run3/gen.spec.ts:3:1 › search for products by name
+  1) results_v2/search/A/run3/gen.spec.ts:3:1 › search for products by name ────────────────────────
+
+    TimeoutError: locator.fill: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('[data-testid="search-field"]')
+
+
+       7 |   // Find the search field and enter a valid search query
+       8 |   const searchField = await page.locator('[data-testid="search-field"]');
+    >  9 |   await searchField.fill('Laptop');
+         |                     ^
+      10 |   await searchField.press('Enter');
+      11 |
+      12 |   // Verify that the search results contain the expected product
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/A/run3/gen.spec.ts:9:21
+
+    Error Context: test-results/results_v2-search-A-run3-gen-search-for-products-by-name/error-context.md
+
+
+  1 failed
+    results_v2/search/A/run3/gen.spec.ts:3:1 › search for products by name ─────────────────────────
+

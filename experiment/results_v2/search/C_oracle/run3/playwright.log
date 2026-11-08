@@ -1,0 +1,41 @@
+
+Running 2 tests using 1 worker
+
+[1/2] results_v2/search/C_oracle/run3/gen.spec.ts:8:3 › /#/search › search query should return matching products
+  1) results_v2/search/C_oracle/run3/gen.spec.ts:8:3 › /#/search › search query should return matching products 
+
+    TypeError: products.map is not a function
+
+      12 |
+      13 |     const products = await page.locator('.product-item')
+    > 14 |     const productNames = await products.map((product) => product.textContent())
+         |                                         ^
+      15 |     expect(productNames).toContain(searchQuery)
+      16 |   })
+      17 |
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_oracle/run3/gen.spec.ts:14:41
+
+    Error Context: test-results/results_v2-search-C_oracle-6aa43-ld-return-matching-products/error-context.md
+
+
+[2/2] results_v2/search/C_oracle/run3/gen.spec.ts:18:3 › /#/search › search field must resist reflected cross-site scripting
+  2) results_v2/search/C_oracle/run3/gen.spec.ts:18:3 › /#/search › search field must resist reflected cross-site scripting 
+
+    Error: page.waitForSelector: state: expected one of (attached|detached|visible|hidden)
+
+      21 |     await page.press('#searchQuery', 'Enter')
+      22 |
+    > 23 |     await page.waitForSelector('alert(xss)', { timeout: 10000, state: 'none' })
+         |                ^
+      24 |   })
+      25 | })
+      26 |
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/C_oracle/run3/gen.spec.ts:23:16
+
+    Error Context: test-results/results_v2-search-C_oracle-29739-lected-cross-site-scripting/error-context.md
+
+
+  2 failed
+    results_v2/search/C_oracle/run3/gen.spec.ts:8:3 › /#/search › search query should return matching products 
+    results_v2/search/C_oracle/run3/gen.spec.ts:18:3 › /#/search › search field must resist reflected cross-site scripting 
+

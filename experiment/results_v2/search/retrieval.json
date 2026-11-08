@@ -1,0 +1,63 @@
+{
+  "query": "As a customer I want to search for products by name so that I can find what I want to buy.\nA search returns the matching products.\nNon-functional (security): the search field must not execute injected script content, i.e. it must resist reflected cross-site scripting.",
+  "top10": [
+    {
+      "file": "test/cypress/e2e/search.spec.ts",
+      "score": 0.5515
+    },
+    {
+      "file": "test/cypress/e2e/noSql.spec.ts",
+      "score": 0.5387
+    },
+    {
+      "file": "test/cypress/e2e/publicFtp.spec.ts",
+      "score": 0.5141
+    },
+    {
+      "file": "test/cypress/e2e/register.spec.ts",
+      "score": 0.5107
+    },
+    {
+      "file": "test/cypress/e2e/trackOrder.spec.ts",
+      "score": 0.5098
+    },
+    {
+      "file": "test/cypress/e2e/tokenSale.spec.ts",
+      "score": 0.5083
+    },
+    {
+      "file": "test/cypress/e2e/privacyPolicy.spec.ts",
+      "score": 0.5077
+    },
+    {
+      "file": "test/cypress/e2e/profile.spec.ts",
+      "score": 0.504
+    },
+    {
+      "file": "test/cypress/e2e/login.spec.ts",
+      "score": 0.4957
+    },
+    {
+      "file": "test/cypress/e2e/basket.spec.ts",
+      "score": 0.4916
+    }
+  ],
+  "targetRank": 1,
+  "fixtureRank": 31,
+  "top1IsTarget": true,
+  "expansion": {
+    "test/cypress/support/e2e.ts": "implicit: supportFile in cypress.config.ts, loaded before every spec",
+    "test/cypress/support/commands.ts": "defines cy.expectChallengeSolved() used in search.spec.ts",
+    "test/cypress/support/setup.ts": "imported by e2e.ts"
+  },
+  "serverSideTasks": [
+    {
+      "task": "GetChristmasProduct",
+      "handler": "return config.get<ProductConfig[]>('products').filter( (product) => product.useForChristmasSpecialChallenge )[0]"
+    },
+    {
+      "task": "GetPastebinLeakProduct",
+      "handler": "return config.get<ProductConfig[]>('products').filter( (product) => product.keywordsForPastebinDataLeakChallenge )[0]"
+    }
+  ]
+}

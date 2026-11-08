@@ -1,0 +1,249 @@
+
+Running 5 tests using 1 worker
+
+[1/5] results_v2/login/B_auto/run1/gen.spec.ts:4:3 › /#/login › valid credentials
+  1) results_v2/login/B_auto/run1/gen.spec.ts:4:3 › /#/login › valid credentials ───────────────────
+
+    TimeoutError: page.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#loginButton')
+        - locator resolved to <button type="submit" color="primary" id="loginButton" aria-label="Login" mat-raised-button="" _ngcontent-ng-c347502026="" mat-ripple-loader-uninitialized="" mat-ripple-loader-class-name="mat-mdc-button-ripple" class="mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary">…</button>
+      - attempting click action
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <h1>…</h1> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+      - retrying click action
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+      - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        19 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+
+
+       6 |     await page.fill('#email', 'wurstbrot');
+       7 |     await page.fill('#password', 'EinBelegtesBrotMitSchinkenSCHINKEN!');
+    >  8 |     await page.click('#loginButton');
+         |                ^
+       9 |     await expect(page).toHaveURL('/#/privacy-security/two-factor-authentication');
+      10 |   });
+      11 |
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run1/gen.spec.ts:8:16
+
+    Error Context: test-results/results_v2-login-B_auto-run1-gen--login-valid-credentials/error-context.md
+
+
+[2/5] results_v2/login/B_auto/run1/gen.spec.ts:12:3 › /#/login › invalid credentials
+  2) results_v2/login/B_auto/run1/gen.spec.ts:12:3 › /#/login › invalid credentials ────────────────
+
+    TimeoutError: page.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#loginButton')
+        - locator resolved to <button type="submit" color="primary" id="loginButton" aria-label="Login" mat-raised-button="" _ngcontent-ng-c347502026="" mat-ripple-loader-uninitialized="" mat-ripple-loader-class-name="mat-mdc-button-ripple" class="mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary">…</button>
+      - attempting click action
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <app-welcome-banner _nghost-ng-c3578434029="" class="mat-mdc-dialog-component-host">…</app-welcome-banner> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+      - retrying click action
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+      - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        19 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+
+
+      14 |     await page.fill('#email', 'invalidemail');
+      15 |     await page.fill('#password', 'wrongpassword');
+    > 16 |     await page.click('#loginButton');
+         |                ^
+      17 |     await expect(page).toHaveURL('/#/login');
+      18 |   });
+      19 |
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run1/gen.spec.ts:16:16
+
+    Error Context: test-results/results_v2-login-B_auto-run1-gen--login-invalid-credentials/error-context.md
+
+
+[3/5] results_v2/login/B_auto/run1/gen.spec.ts:20:3 › /#/login › SQL injection in the email field
+  3) results_v2/login/B_auto/run1/gen.spec.ts:20:3 › /#/login › SQL injection in the email field ───
+
+    TimeoutError: page.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#loginButton')
+        - locator resolved to <button type="submit" color="primary" id="loginButton" aria-label="Login" mat-raised-button="" _ngcontent-ng-c347502026="" mat-ripple-loader-uninitialized="" mat-ripple-loader-class-name="mat-mdc-button-ripple" class="mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        19 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+
+
+      22 |     await page.fill('#email', 'x\' OR 1=1 --');
+      23 |     await page.fill('#password', 'anything');
+    > 24 |     await page.click('#loginButton');
+         |                ^
+      25 |     await expect(page).toHaveURL('/#/login');
+      26 |   });
+      27 |
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run1/gen.spec.ts:24:16
+
+    Error Context: test-results/results_v2-login-B_auto-ru-d442f-njection-in-the-email-field/error-context.md
+
+
+[4/5] results_v2/login/B_auto/run1/gen.spec.ts:28:3 › /#/login › known leaked or weak credentials
+  4) results_v2/login/B_auto/run1/gen.spec.ts:28:3 › /#/login › known leaked or weak credentials ───
+
+    TimeoutError: page.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#loginButton')
+        - locator resolved to <button type="submit" color="primary" id="loginButton" aria-label="Login" mat-raised-button="" _ngcontent-ng-c347502026="" mat-ripple-loader-uninitialized="" mat-ripple-loader-class-name="mat-mdc-button-ripple" class="mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary">…</button>
+      - attempting click action
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <h1>…</h1> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+      - retrying click action
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+      - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        19 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+
+
+      30 |     await page.fill('#email', 'amy');
+      31 |     await page.fill('#password', 'K1f.....................');
+    > 32 |     await page.click('#loginButton');
+         |                ^
+      33 |     await expect(page).toHaveURL('/#/privacy-security/two-factor-authentication');
+      34 |   });
+      35 |
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run1/gen.spec.ts:32:16
+
+    Error Context: test-results/results_v2-login-B_auto-ru-6fee6--leaked-or-weak-credentials/error-context.md
+
+
+[5/5] results_v2/login/B_auto/run1/gen.spec.ts:36:3 › /#/login › 2FA enabled account
+  5) results_v2/login/B_auto/run1/gen.spec.ts:36:3 › /#/login › 2FA enabled account ────────────────
+
+    TimeoutError: page.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#loginButton')
+        - locator resolved to <button type="submit" color="primary" id="loginButton" aria-label="Login" mat-raised-button="" _ngcontent-ng-c347502026="" mat-ripple-loader-uninitialized="" mat-ripple-loader-class-name="mat-mdc-button-ripple" class="mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary">…</button>
+      - attempting click action
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <h1>…</h1> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+      - retrying click action
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+      - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        19 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+
+
+      38 |     await page.fill('#email', 'wurstbrot');
+      39 |     await page.fill('#password', 'EinBelegtesBrotMitSchinkenSCHINKEN!');
+    > 40 |     await page.click('#loginButton');
+         |                ^
+      41 |     await page.waitForSelector('#initialToken');
+      42 |     await page.fill('#initialToken', 'IFTXE3SPOEYVURT2MRYGI52TKJ4HC3KH');
+      43 |     await page.click('#setupTwoFactorAuth');
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run1/gen.spec.ts:40:16
+
+    Error Context: test-results/results_v2-login-B_auto-run1-gen--login-2FA-enabled-account/error-context.md
+
+
+  5 failed
+    results_v2/login/B_auto/run1/gen.spec.ts:4:3 › /#/login › valid credentials ────────────────────
+    results_v2/login/B_auto/run1/gen.spec.ts:12:3 › /#/login › invalid credentials ─────────────────
+    results_v2/login/B_auto/run1/gen.spec.ts:20:3 › /#/login › SQL injection in the email field ────
+    results_v2/login/B_auto/run1/gen.spec.ts:28:3 › /#/login › known leaked or weak credentials ────
+    results_v2/login/B_auto/run1/gen.spec.ts:36:3 › /#/login › 2FA enabled account ─────────────────
+

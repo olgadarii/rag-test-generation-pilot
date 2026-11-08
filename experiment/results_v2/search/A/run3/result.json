@@ -1,0 +1,22 @@
+{
+  "story": "search",
+  "condition": "A",
+  "run": 3,
+  "seed": 3007,
+  "contextFiles": [],
+  "promptTokens": 161,
+  "outputTokens": 232,
+  "genSeconds": 11.017857333,
+  "testsTotal": 1,
+  "testsPassed": 0,
+  "topErrors": [],
+  "tests": [
+    {
+      "title": "search for products by name",
+      "status": "failed",
+      "error": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('[data-testid=\"search-field\"]')\n",
+      "category": "selector_not_found"
+    }
+  ],
+  "runCategory": null
+}

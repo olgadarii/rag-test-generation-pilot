@@ -1,0 +1,152 @@
+
+Running 7 tests using 1 worker
+
+[1/7] results_v2/search/B_oracle/run1/gen.spec.ts:8:3 › /#/search › search query should return matching products
+  1) results_v2/search/B_oracle/run1/gen.spec.ts:8:3 › /#/search › search query should return matching products 
+
+    Error: locator.fill: Error: Element is not an <input>, <textarea>, <select> or [contenteditable] and does not have a role allowing [aria-readonly]
+    Call log:
+      - waiting for locator('#searchQuery')
+        - locator resolved to <app-mat-search-bar id="searchQuery" _nghost-ng-c1668053465="" _ngcontent-ng-c1731522247="" aria-label="Click to search">…</app-mat-search-bar>
+        - fill("test product")
+      - attempting fill action
+        - waiting for element to be visible, enabled and editable
+
+
+       7 |
+       8 |   test('search query should return matching products', async ({ page }) => {
+    >  9 |     await page.locator('#searchQuery').fill('test product')
+         |                                        ^
+      10 |     await page.locator('app-mat-search-bar input').press('Enter')
+      11 |     const productNames = await page.locator('.product-name').textContent()
+      12 |     expect(productNames).toContain('test product')
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/B_oracle/run1/gen.spec.ts:9:40
+
+    Error Context: test-results/results_v2-search-B_oracle-1e07e-ld-return-matching-products/error-context.md
+
+
+[2/7] results_v2/search/B_oracle/run1/gen.spec.ts:15:3 › /#/search › search field must resist reflected XSS attacks
+  2) results_v2/search/B_oracle/run1/gen.spec.ts:15:3 › /#/search › search field must resist reflected XSS attacks 
+
+    Error: locator.fill: Error: Element is not an <input>, <textarea>, <select> or [contenteditable] and does not have a role allowing [aria-readonly]
+    Call log:
+      - waiting for locator('#searchQuery')
+        - locator resolved to <app-mat-search-bar id="searchQuery" _nghost-ng-c1668053465="" _ngcontent-ng-c1731522247="" aria-label="Click to search">…</app-mat-search-bar>
+        - fill("<script>alert("xss")</script>")
+      - attempting fill action
+        - waiting for element to be visible, enabled and editable
+
+
+      14 |
+      15 |   test('search field must resist reflected XSS attacks', async ({ page }) => {
+    > 16 |     await page.locator('#searchQuery').fill('<script>alert("xss")</script>')
+         |                                        ^
+      17 |     await page.locator('app-mat-search-bar input').press('Enter')
+      18 |     await expect(page).not.toHaveDialog()
+      19 |   })
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/B_oracle/run1/gen.spec.ts:16:40
+
+    Error Context: test-results/results_v2-search-B_oracle-36208-esist-reflected-XSS-attacks/error-context.md
+
+
+[3/7] results_v2/search/B_oracle/run1/gen.spec.ts:21:3 › /#/search › search query should be susceptible to reflected XSS attacks (Bonus Payload)
+  3) results_v2/search/B_oracle/run1/gen.spec.ts:21:3 › /#/search › search query should be susceptible to reflected XSS attacks (Bonus Payload) 
+
+    Error: locator.fill: Error: Element is not an <input>, <textarea>, <select> or [contenteditable] and does not have a role allowing [aria-readonly]
+    Call log:
+      - waiting for locator('#searchQuery')
+        - locator resolved to <app-mat-search-bar id="searchQuery" _nghost-ng-c1668053465="" _ngcontent-ng-c1731522247="" aria-label="Click to search">…</app-mat-search-bar>
+        - fill("<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/771984076&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>")
+      - attempting fill action
+        - waiting for element to be visible, enabled and editable
+
+
+      20 |
+      21 |   test('search query should be susceptible to reflected XSS attacks (Bonus Payload)', async ({ page }) => {
+    > 22 |     await page.locator('#searchQuery').fill(
+         |                                        ^
+      23 |       '<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/771984076&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>'
+      24 |     )
+      25 |     await page.locator('app-mat-search-bar input').press('Enter')
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/B_oracle/run1/gen.spec.ts:22:40
+
+    Error Context: test-results/results_v2-search-B_oracle-86451--XSS-attacks-Bonus-Payload-/error-context.md
+
+
+[4/7] results_v2/search/B_oracle/run1/gen.spec.ts:31:3 › /rest/products/search › should return matching products
+  4) results_v2/search/B_oracle/run1/gen.spec.ts:31:3 › /rest/products/search › should return matching products 
+
+    TypeError: response.jsonValue is not a function
+
+      31 |   test('should return matching products', async ({ page }) => {
+      32 |     const response = await page.request.get('/rest/products/search?q=test')
+    > 33 |     const products = response.jsonValue()
+         |                               ^
+      34 |     expect(products.filter(product => product.name.includes('test')).length).toBeGreaterThan(0)
+      35 |   })
+      36 |
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/B_oracle/run1/gen.spec.ts:33:31
+
+    Error Context: test-results/results_v2-search-B_oracle-7654e-ld-return-matching-products/error-context.md
+
+
+[5/7] results_v2/search/B_oracle/run1/gen.spec.ts:37:3 › /rest/products/search › should resist SQL injection attacks
+  5) results_v2/search/B_oracle/run1/gen.spec.ts:37:3 › /rest/products/search › should resist SQL injection attacks 
+
+    ReferenceError: page is not defined
+
+      36 |
+      37 |   test('should resist SQL injection attacks', async () => {
+    > 38 |     const response = await page.request.get('/rest/products/search?q=%29%20union%20select%201,2,3,4,5,6,7,8,9,10--')
+         |                      ^
+      39 |     const products = response.jsonValue()
+      40 |     expect(products.length).toBeGreaterThan(0)
+      41 |   })
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/B_oracle/run1/gen.spec.ts:38:22
+
+    Error Context: test-results/results_v2-search-B_oracle-cb6a9-esist-SQL-injection-attacks/error-context.md
+
+
+[6/7] results_v2/search/B_oracle/run1/gen.spec.ts:43:3 › /rest/products/search › should not reveal logically deleted products on SQL injection attack
+  6) results_v2/search/B_oracle/run1/gen.spec.ts:43:3 › /rest/products/search › should not reveal logically deleted products on SQL injection attack 
+
+    ReferenceError: page is not defined
+
+      42 |
+      43 |   test('should not reveal logically deleted products on SQL injection attack', async () => {
+    > 44 |     const response = await page.request.get('/rest/products/search?q=%29--')
+         |                      ^
+      45 |     const products = response.jsonValue()
+      46 |     const christmasProduct = await page.evaluate(() => {
+      47 |       return JSON.parse(localStorage.getItem('christmasProduct'))
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/B_oracle/run1/gen.spec.ts:44:22
+
+    Error Context: test-results/results_v2-search-B_oracle-ee57e-cts-on-SQL-injection-attack/error-context.md
+
+
+[7/7] results_v2/search/B_oracle/run1/gen.spec.ts:52:3 › /rest/products/search › should be able to place Christmas product into shopping card by id
+  7) results_v2/search/B_oracle/run1/gen.spec.ts:52:3 › /rest/products/search › should be able to place Christmas product into shopping card by id 
+
+    ReferenceError: page is not defined
+
+      51 |
+      52 |   test('should be able to place Christmas product into shopping card by id', async () => {
+    > 53 |     const response = await page.request.get('/api/products')
+         |                      ^
+      54 |     const products = response.jsonValue()
+      55 |     const christmasProduct = products.find(product => product.name.includes('Christmas Special'))
+      56 |     if (christmasProduct) {
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/search/B_oracle/run1/gen.spec.ts:53:22
+
+    Error Context: test-results/results_v2-search-B_oracle-923ec-ct-into-shopping-card-by-id/error-context.md
+
+
+  7 failed
+    results_v2/search/B_oracle/run1/gen.spec.ts:8:3 › /#/search › search query should return matching products 
+    results_v2/search/B_oracle/run1/gen.spec.ts:15:3 › /#/search › search field must resist reflected XSS attacks 
+    results_v2/search/B_oracle/run1/gen.spec.ts:21:3 › /#/search › search query should be susceptible to reflected XSS attacks (Bonus Payload) 
+    results_v2/search/B_oracle/run1/gen.spec.ts:31:3 › /rest/products/search › should return matching products 
+    results_v2/search/B_oracle/run1/gen.spec.ts:37:3 › /rest/products/search › should resist SQL injection attacks 
+    results_v2/search/B_oracle/run1/gen.spec.ts:43:3 › /rest/products/search › should not reveal logically deleted products on SQL injection attack 
+    results_v2/search/B_oracle/run1/gen.spec.ts:52:3 › /rest/products/search › should be able to place Christmas product into shopping card by id 
+

@@ -1,0 +1,46 @@
+{
+  "story": "login",
+  "condition": "A",
+  "run": 3,
+  "seed": 3007,
+  "contextFiles": [],
+  "promptTokens": 192,
+  "outputTokens": 613,
+  "genSeconds": 30.539948458,
+  "testsTotal": 5,
+  "testsPassed": 0,
+  "topErrors": [],
+  "tests": [
+    {
+      "title": "SQL injection in the email field should not bypass authentication",
+      "status": "failed",
+      "error": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n  - waiting for getByRole('link', { name: 'Login' })\n",
+      "category": "selector_not_found"
+    },
+    {
+      "title": "known weak credentials should not bypass authentication",
+      "status": "failed",
+      "error": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n  - waiting for getByRole('link', { name: 'Login' })\n",
+      "category": "selector_not_found"
+    },
+    {
+      "title": "should require valid TOTP code after password step",
+      "status": "failed",
+      "error": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n  - waiting for getByRole('link', { name: 'Login' })\n",
+      "category": "selector_not_found"
+    },
+    {
+      "title": "valid credentials should log in successfully",
+      "status": "failed",
+      "error": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n  - waiting for getByRole('link', { name: 'Login' })\n",
+      "category": "selector_not_found"
+    },
+    {
+      "title": "invalid credentials should not log in",
+      "status": "failed",
+      "error": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n  - waiting for getByRole('link', { name: 'Login' })\n",
+      "category": "selector_not_found"
+    }
+  ],
+  "runCategory": null
+}

@@ -1,0 +1,539 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/26.8.1/bin/node",
+      "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/node_modules/.bin/playwright",
+      "test",
+      "results_v2/login/B_auto/run3/gen.spec.ts",
+      "--config",
+      "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/playwright.config.mjs"
+    ],
+    "configFile": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/playwright.config.mjs",
+    "rootDir": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment",
+        "testIgnore": [],
+        "testMatch": [
+          "/gen\\.spec\\.ts$/"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "results_v2/login/B_auto/run3/gen.spec.ts",
+      "file": "results_v2/login/B_auto/run3/gen.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "/#/login",
+          "file": "results_v2/login/B_auto/run3/gen.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "valid credentials should log in successfully",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10313,
+                      "error": {
+                        "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#loginButton')\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"submit\" color=\"primary\" id=\"loginButton\" aria-label=\"Login\" mat-raised-button=\"\" _ngcontent-ng-c347502026=\"\" mat-ripple-loader-uninitialized=\"\" mat-ripple-loader-class-name=\"mat-mdc-button-ripple\" class=\"mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <app-welcome-banner _nghost-ng-c3578434029=\"\" class=\"mat-mdc-dialog-component-host\">…</app-welcome-banner> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    19 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+                        "stack": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#loginButton')\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"submit\" color=\"primary\" id=\"loginButton\" aria-label=\"Login\" mat-raised-button=\"\" _ngcontent-ng-c347502026=\"\" mat-ripple-loader-uninitialized=\"\" mat-ripple-loader-class-name=\"mat-mdc-button-ripple\" class=\"mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <app-welcome-banner _nghost-ng-c3578434029=\"\" class=\"mat-mdc-dialog-component-host\">…</app-welcome-banner> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    19 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run3/gen.spec.ts:8:16",
+                        "location": {
+                          "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run3/gen.spec.ts",
+                          "column": 16,
+                          "line": 8
+                        },
+                        "snippet": "   6 |     await page.fill('#email', 'wurstbrot');\n   7 |     await page.fill('#password', 'EinBelegtesBrotMitSchinkenSCHINKEN!');\n>  8 |     await page.click('#loginButton');\n     |                ^\n   9 |     await expect(page).toHaveTitle('Dashboard');\n  10 |   });\n  11 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run3/gen.spec.ts",
+                            "column": 16,
+                            "line": 8
+                          },
+                          "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#loginButton')\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"submit\" color=\"primary\" id=\"loginButton\" aria-label=\"Login\" mat-raised-button=\"\" _ngcontent-ng-c347502026=\"\" mat-ripple-loader-uninitialized=\"\" mat-ripple-loader-class-name=\"mat-mdc-button-ripple\" class=\"mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <app-welcome-banner _nghost-ng-c3578434029=\"\" class=\"mat-mdc-dialog-component-host\">…</app-welcome-banner> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    19 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n\n   6 |     await page.fill('#email', 'wurstbrot');\n   7 |     await page.fill('#password', 'EinBelegtesBrotMitSchinkenSCHINKEN!');\n>  8 |     await page.click('#loginButton');\n     |                ^\n   9 |     await expect(page).toHaveTitle('Dashboard');\n  10 |   });\n  11 |\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run3/gen.spec.ts:8:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-08T19:34:23.173Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/test-results/results_v2-login-B_auto-ru-d69af--should-log-in-successfully/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run3/gen.spec.ts",
+                        "column": 16,
+                        "line": 8
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "db1e1038b24d2c0b42b8-341d554ccb703f77936a",
+              "file": "results_v2/login/B_auto/run3/gen.spec.ts",
+              "line": 4,
+              "column": 3
+            },
+            {
+              "title": "invalid credentials should not log in",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10265,
+                      "error": {
+                        "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#loginButton')\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"submit\" color=\"primary\" id=\"loginButton\" aria-label=\"Login\" mat-raised-button=\"\" _ngcontent-ng-c347502026=\"\" mat-ripple-loader-uninitialized=\"\" mat-ripple-loader-class-name=\"mat-mdc-button-ripple\" class=\"mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <h1>…</h1> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    19 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+                        "stack": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#loginButton')\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"submit\" color=\"primary\" id=\"loginButton\" aria-label=\"Login\" mat-raised-button=\"\" _ngcontent-ng-c347502026=\"\" mat-ripple-loader-uninitialized=\"\" mat-ripple-loader-class-name=\"mat-mdc-button-ripple\" class=\"mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <h1>…</h1> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    19 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run3/gen.spec.ts:16:16",
+                        "location": {
+                          "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run3/gen.spec.ts",
+                          "column": 16,
+                          "line": 16
+                        },
+                        "snippet": "  14 |     await page.fill('#email', 'invalidemail');\n  15 |     await page.fill('#password', 'wrongpassword');\n> 16 |     await page.click('#loginButton');\n     |                ^\n  17 |     await expect(page.locator('.alert-danger')).toBeVisible();\n  18 |   });\n  19 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run3/gen.spec.ts",
+                            "column": 16,
+                            "line": 16
+                          },
+                          "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#loginButton')\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"submit\" color=\"primary\" id=\"loginButton\" aria-label=\"Login\" mat-raised-button=\"\" _ngcontent-ng-c347502026=\"\" mat-ripple-loader-uninitialized=\"\" mat-ripple-loader-class-name=\"mat-mdc-button-ripple\" class=\"mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <h1>…</h1> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    19 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n\n  14 |     await page.fill('#email', 'invalidemail');\n  15 |     await page.fill('#password', 'wrongpassword');\n> 16 |     await page.click('#loginButton');\n     |                ^\n  17 |     await expect(page.locator('.alert-danger')).toBeVisible();\n  18 |   });\n  19 |\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run3/gen.spec.ts:16:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-08T19:34:33.746Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/test-results/results_v2-login-B_auto-ru-2925d-edentials-should-not-log-in/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run3/gen.spec.ts",
+                        "column": 16,
+                        "line": 16
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "db1e1038b24d2c0b42b8-2379bb2794d80084c5b4",
+              "file": "results_v2/login/B_auto/run3/gen.spec.ts",
+              "line": 12,
+              "column": 3
+            },
+            {
+              "title": "SQL injection in the email field should not bypass authentication",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10247,
+                      "error": {
+                        "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#loginButton')\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"submit\" color=\"primary\" id=\"loginButton\" aria-label=\"Login\" mat-raised-button=\"\" _ngcontent-ng-c347502026=\"\" mat-ripple-loader-uninitialized=\"\" mat-ripple-loader-class-name=\"mat-mdc-button-ripple\" class=\"mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    19 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+                        "stack": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#loginButton')\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"submit\" color=\"primary\" id=\"loginButton\" aria-label=\"Login\" mat-raised-button=\"\" _ngcontent-ng-c347502026=\"\" mat-ripple-loader-uninitialized=\"\" mat-ripple-loader-class-name=\"mat-mdc-button-ripple\" class=\"mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    19 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run3/gen.spec.ts:24:16",
+                        "location": {
+                          "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run3/gen.spec.ts",
+                          "column": 16,
+                          "line": 24
+                        },
+                        "snippet": "  22 |     await page.fill('#email', \"';--\"); // SQL injection attempt\n  23 |     await page.fill('#password', 'password123');\n> 24 |     await page.click('#loginButton');\n     |                ^\n  25 |     await expect(page.locator('.alert-danger')).toBeVisible();\n  26 |   });\n  27 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run3/gen.spec.ts",
+                            "column": 16,
+                            "line": 24
+                          },
+                          "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#loginButton')\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"submit\" color=\"primary\" id=\"loginButton\" aria-label=\"Login\" mat-raised-button=\"\" _ngcontent-ng-c347502026=\"\" mat-ripple-loader-uninitialized=\"\" mat-ripple-loader-class-name=\"mat-mdc-button-ripple\" class=\"mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    19 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n\n  22 |     await page.fill('#email', \"';--\"); // SQL injection attempt\n  23 |     await page.fill('#password', 'password123');\n> 24 |     await page.click('#loginButton');\n     |                ^\n  25 |     await expect(page.locator('.alert-danger')).toBeVisible();\n  26 |   });\n  27 |\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run3/gen.spec.ts:24:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-08T19:34:44.263Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/test-results/results_v2-login-B_auto-ru-8b3b4-d-not-bypass-authentication/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run3/gen.spec.ts",
+                        "column": 16,
+                        "line": 24
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "db1e1038b24d2c0b42b8-a1994a00ea0d8920681b",
+              "file": "results_v2/login/B_auto/run3/gen.spec.ts",
+              "line": 20,
+              "column": 3
+            },
+            {
+              "title": "known weak password should not bypass authentication",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10267,
+                      "error": {
+                        "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#loginButton')\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"submit\" color=\"primary\" id=\"loginButton\" aria-label=\"Login\" mat-raised-button=\"\" _ngcontent-ng-c347502026=\"\" mat-ripple-loader-uninitialized=\"\" mat-ripple-loader-class-name=\"mat-mdc-button-ripple\" class=\"mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    19 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+                        "stack": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#loginButton')\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"submit\" color=\"primary\" id=\"loginButton\" aria-label=\"Login\" mat-raised-button=\"\" _ngcontent-ng-c347502026=\"\" mat-ripple-loader-uninitialized=\"\" mat-ripple-loader-class-name=\"mat-mdc-button-ripple\" class=\"mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    19 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run3/gen.spec.ts:32:16",
+                        "location": {
+                          "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run3/gen.spec.ts",
+                          "column": 16,
+                          "line": 32
+                        },
+                        "snippet": "  30 |     await page.fill('#email', 'amy');\n  31 |     await page.fill('#password', 'K1f.....................');\n> 32 |     await page.click('#loginButton');\n     |                ^\n  33 |     await expect(page.locator('.alert-danger')).toBeVisible();\n  34 |   });\n  35 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run3/gen.spec.ts",
+                            "column": 16,
+                            "line": 32
+                          },
+                          "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#loginButton')\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"submit\" color=\"primary\" id=\"loginButton\" aria-label=\"Login\" mat-raised-button=\"\" _ngcontent-ng-c347502026=\"\" mat-ripple-loader-uninitialized=\"\" mat-ripple-loader-class-name=\"mat-mdc-button-ripple\" class=\"mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    19 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <a target=\"_blank\" href=\"https://owasp-juice.shop\">https://owasp-juice.shop</a> from <div class=\"cdk-overlay-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n\n  30 |     await page.fill('#email', 'amy');\n  31 |     await page.fill('#password', 'K1f.....................');\n> 32 |     await page.click('#loginButton');\n     |                ^\n  33 |     await expect(page.locator('.alert-danger')).toBeVisible();\n  34 |   });\n  35 |\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run3/gen.spec.ts:32:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-08T19:34:54.766Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/test-results/results_v2-login-B_auto-ru-45ed7-d-not-bypass-authentication/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run3/gen.spec.ts",
+                        "column": 16,
+                        "line": 32
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "db1e1038b24d2c0b42b8-572a199dc971ea3de25d",
+              "file": "results_v2/login/B_auto/run3/gen.spec.ts",
+              "line": 28,
+              "column": 3
+            },
+            {
+              "title": "two-factor authentication should require TOTP code",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10268,
+                      "error": {
+                        "message": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#totpCode')\u001b[22m\n",
+                        "stack": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#totpCode')\u001b[22m\n\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run3/gen.spec.ts:40:16",
+                        "location": {
+                          "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run3/gen.spec.ts",
+                          "column": 16,
+                          "line": 40
+                        },
+                        "snippet": "  38 |     await page.fill('#email', 'wurstbrot');\n  39 |     await page.fill('#password', 'EinBelegtesBrotMitSchinkenSCHINKEN!');\n> 40 |     await page.fill('#totpCode', '000000'); // Invalid TOTP code\n     |                ^\n  41 |     await page.click('#loginButton');\n  42 |     await expect(page.locator('.alert-danger')).toBeVisible();\n  43 |   });"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run3/gen.spec.ts",
+                            "column": 16,
+                            "line": 40
+                          },
+                          "message": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#totpCode')\u001b[22m\n\n\n  38 |     await page.fill('#email', 'wurstbrot');\n  39 |     await page.fill('#password', 'EinBelegtesBrotMitSchinkenSCHINKEN!');\n> 40 |     await page.fill('#totpCode', '000000'); // Invalid TOTP code\n     |                ^\n  41 |     await page.click('#loginButton');\n  42 |     await expect(page.locator('.alert-danger')).toBeVisible();\n  43 |   });\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run3/gen.spec.ts:40:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-08T19:35:05.281Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/test-results/results_v2-login-B_auto-ru-fc366-on-should-require-TOTP-code/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run3/gen.spec.ts",
+                        "column": 16,
+                        "line": 40
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "db1e1038b24d2c0b42b8-502c0be1559186b776e2",
+              "file": "results_v2/login/B_auto/run3/gen.spec.ts",
+              "line": 36,
+              "column": 3
+            },
+            {
+              "title": "two-factor authentication setup for an account without 2fa should work",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10261,
+                      "error": {
+                        "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#setupTwoFactorAuth')\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"submit\" color=\"primary\" disabled=\"true\" mat-raised-button=\"\" id=\"setupTwoFactorAuth\" _ngcontent-ng-c889377274=\"\" mat-ripple-loader-disabled=\"\" mat-ripple-loader-uninitialized=\"\" mat-ripple-loader-class-name=\"mat-mdc-button-ripple\" aria-label=\"Button to complete the two-factor configuration\" class=\"mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary mat-mdc-button-disabled\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    19 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not enabled\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+                        "stack": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#setupTwoFactorAuth')\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"submit\" color=\"primary\" disabled=\"true\" mat-raised-button=\"\" id=\"setupTwoFactorAuth\" _ngcontent-ng-c889377274=\"\" mat-ripple-loader-disabled=\"\" mat-ripple-loader-uninitialized=\"\" mat-ripple-loader-class-name=\"mat-mdc-button-ripple\" aria-label=\"Button to complete the two-factor configuration\" class=\"mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary mat-mdc-button-disabled\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    19 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not enabled\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run3/gen.spec.ts:49:16",
+                        "location": {
+                          "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run3/gen.spec.ts",
+                          "column": 16,
+                          "line": 49
+                        },
+                        "snippet": "  47 |     await page.fill('#currentPasswordSetup', 'K1f.....................');\n  48 |     await page.fill('#initialToken', 'IFTXE3SPOEYVURT2MRYGI52TKJ4HC3KH');\n> 49 |     await page.click('#setupTwoFactorAuth');\n     |                ^\n  50 |     await expect(page.locator('.mat-snack-bar-container')).toHaveText('Two-Factor Authentication has been enabled.');\n  51 |   });\n  52 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run3/gen.spec.ts",
+                            "column": 16,
+                            "line": 49
+                          },
+                          "message": "TimeoutError: page.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#setupTwoFactorAuth')\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"submit\" color=\"primary\" disabled=\"true\" mat-raised-button=\"\" id=\"setupTwoFactorAuth\" _ngcontent-ng-c889377274=\"\" mat-ripple-loader-disabled=\"\" mat-ripple-loader-uninitialized=\"\" mat-ripple-loader-class-name=\"mat-mdc-button-ripple\" aria-label=\"Button to complete the two-factor configuration\" class=\"mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary mat-mdc-button-disabled\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    19 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not enabled\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n\n  47 |     await page.fill('#currentPasswordSetup', 'K1f.....................');\n  48 |     await page.fill('#initialToken', 'IFTXE3SPOEYVURT2MRYGI52TKJ4HC3KH');\n> 49 |     await page.click('#setupTwoFactorAuth');\n     |                ^\n  50 |     await expect(page.locator('.mat-snack-bar-container')).toHaveText('Two-Factor Authentication has been enabled.');\n  51 |   });\n  52 |\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run3/gen.spec.ts:49:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-08T19:35:15.796Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/test-results/results_v2-login-B_auto-ru-69f91-unt-without-2fa-should-work/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run3/gen.spec.ts",
+                        "column": 16,
+                        "line": 49
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "db1e1038b24d2c0b42b8-4080b4f46910798b9f06",
+              "file": "results_v2/login/B_auto/run3/gen.spec.ts",
+              "line": 45,
+              "column": 3
+            },
+            {
+              "title": "two-factor authentication disable for an account with 2fa should work",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10205,
+                      "error": {
+                        "message": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#currentPasswordDisable')\u001b[22m\n",
+                        "stack": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#currentPasswordDisable')\u001b[22m\n\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run3/gen.spec.ts:55:16",
+                        "location": {
+                          "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run3/gen.spec.ts",
+                          "column": 16,
+                          "line": 55
+                        },
+                        "snippet": "  53 |   test('two-factor authentication disable for an account with 2fa should work', async ({ page }) => {\n  54 |     await page.goto('http://localhost:3000/#/privacy-security/two-factor-authentication');\n> 55 |     await page.fill('#currentPasswordDisable', 'K1f.....................');\n     |                ^\n  56 |     await page.click('#disableTwoFactorAuth');\n  57 |     await expect(page.locator('.mat-snack-bar-container')).toHaveText('Two-Factor Authentication has been removed.');\n  58 |   });"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run3/gen.spec.ts",
+                            "column": 16,
+                            "line": 55
+                          },
+                          "message": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#currentPasswordDisable')\u001b[22m\n\n\n  53 |   test('two-factor authentication disable for an account with 2fa should work', async ({ page }) => {\n  54 |     await page.goto('http://localhost:3000/#/privacy-security/two-factor-authentication');\n> 55 |     await page.fill('#currentPasswordDisable', 'K1f.....................');\n     |                ^\n  56 |     await page.click('#disableTwoFactorAuth');\n  57 |     await expect(page.locator('.mat-snack-bar-container')).toHaveText('Two-Factor Authentication has been removed.');\n  58 |   });\n    at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run3/gen.spec.ts:55:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-08T19:35:26.302Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/test-results/results_v2-login-B_auto-ru-0ec97-ccount-with-2fa-should-work/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_auto/run3/gen.spec.ts",
+                        "column": 16,
+                        "line": 55
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "db1e1038b24d2c0b42b8-77af38a22c3796952014",
+              "file": "results_v2/login/B_auto/run3/gen.spec.ts",
+              "line": 53,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-08T19:34:22.954Z",
+    "duration": 73640.42300000001,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 7,
+    "flaky": 0
+  }
+}

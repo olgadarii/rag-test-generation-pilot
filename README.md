@@ -54,3 +54,10 @@ with the retrieved context for each condition, not by a packaged tool. The retri
 generation agent described in the paper's Methodology as the target architecture belongs to
 the planned full-scale study (fine-tuned retriever vs. non-fine-tuned baseline, controlled
 injected defects), which is tracked separately and not part of this repository.
+
+## Automated reproduction (8 Nov 2026)
+
+`experiment/` contains an end-to-end automated pipeline (BGE-M3 retrieval → Qwen2.5-7B-Instruct →
+Playwright against live Juice Shop v20.3.0) and its results: the failure mechanisms reported in the
+paper reproduce, the complete-retrieval success (14/15) does not under single-shot automated
+generation, and the pilot suite above re-executes at 14/15. See `experiment/README.md`.

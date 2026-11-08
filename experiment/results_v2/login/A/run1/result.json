@@ -1,0 +1,46 @@
+{
+  "story": "login",
+  "condition": "A",
+  "run": 1,
+  "seed": 1007,
+  "contextFiles": [],
+  "promptTokens": 192,
+  "outputTokens": 406,
+  "genSeconds": 36.855927042,
+  "testsTotal": 5,
+  "testsPassed": 0,
+  "topErrors": [],
+  "tests": [
+    {
+      "title": "valid credentials login",
+      "status": "failed",
+      "error": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('#email')\n",
+      "category": "selector_not_found"
+    },
+    {
+      "title": "invalid credentials login",
+      "status": "failed",
+      "error": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('#email')\n",
+      "category": "selector_not_found"
+    },
+    {
+      "title": "SQL injection in email field",
+      "status": "failed",
+      "error": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('#email')\n",
+      "category": "selector_not_found"
+    },
+    {
+      "title": "known weak credentials",
+      "status": "failed",
+      "error": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('#email')\n",
+      "category": "selector_not_found"
+    },
+    {
+      "title": "2FA required for enabled account",
+      "status": "failed",
+      "error": "TimeoutError: page.fill: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('#email')\n",
+      "category": "selector_not_found"
+    }
+  ],
+  "runCategory": null
+}

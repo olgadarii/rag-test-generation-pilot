@@ -1,0 +1,23 @@
+{
+  "story": "login",
+  "condition": "C_auto",
+  "run": 2,
+  "seed": 2007,
+  "contextFiles": [
+    "test/cypress/e2e/totpSetup.spec.ts",
+    "test/cypress/support/e2e.ts",
+    "test/cypress/support/commands.ts",
+    "test/cypress/support/setup.ts"
+  ],
+  "promptTokens": 1292,
+  "outputTokens": 605,
+  "genSeconds": 34.017782041,
+  "testsTotal": 0,
+  "testsPassed": 0,
+  "topErrors": [
+    "SyntaxError: /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/C_auto/run2/gen.spec.ts: Invalid regular expression flag. (12:38)\n\n  10 |     await page.fill('#password', 'EinBelegtesBrotMitSchinkenSCHINKEN!')\n  11 |     await page.click('#loginButton')\n> 12 |     await expect(page).toHaveURL(/#/dashboard/)\n     |                                       ^\n  13 |   })\n  14 |\n  15 |   test('invalid credentials should not log in', async ({ page }) => {",
+    "Error: No tests found.\nMake sure that arguments are regular expressions matching test files.\nYou may need to escape symbols like \"$\" or \"*\" and quote the arguments."
+  ],
+  "tests": [],
+  "runCategory": "api_or_syntax_error"
+}

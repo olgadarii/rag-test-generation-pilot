@@ -1,0 +1,192 @@
+{
+  "generated": "2026-11-08T19:44:12.368Z",
+  "stories": {
+    "login": {
+      "retrieval": {
+        "top1": "test/cypress/e2e/totpSetup.spec.ts",
+        "targetRank": 3,
+        "fixtureRank": 33,
+        "top1IsTarget": false,
+        "expansion": [
+          "test/cypress/support/e2e.ts",
+          "test/cypress/support/commands.ts",
+          "test/cypress/support/setup.ts"
+        ]
+      },
+      "conditions": {
+        "A": {
+          "runs": 3,
+          "passed": 0,
+          "total": 15,
+          "perRun": [
+            "0/5",
+            "0/5",
+            "0/5"
+          ],
+          "runsWithPass": 0,
+          "failureCategories": {
+            "selector_not_found": 15
+          }
+        },
+        "B_auto": {
+          "runs": 3,
+          "passed": 0,
+          "total": 17,
+          "perRun": [
+            "0/5",
+            "0/5",
+            "0/7"
+          ],
+          "runsWithPass": 0,
+          "failureCategories": {
+            "overlay_blocked": 9,
+            "selector_not_found": 8
+          }
+        },
+        "C_auto": {
+          "runs": 3,
+          "passed": 0,
+          "total": 12,
+          "perRun": [
+            "0/6",
+            "0/0",
+            "0/6"
+          ],
+          "runsWithPass": 0,
+          "failureCategories": {
+            "overlay_blocked": 10,
+            "selector_not_found": 2,
+            "api_or_syntax_error": 1
+          }
+        },
+        "B_oracle": {
+          "runs": 3,
+          "passed": 0,
+          "total": 44,
+          "perRun": [
+            "0/15",
+            "0/14",
+            "0/15"
+          ],
+          "runsWithPass": 0,
+          "failureCategories": {
+            "overlay_blocked": 32,
+            "other": 11,
+            "selector_not_found": 1
+          }
+        },
+        "C_oracle": {
+          "runs": 3,
+          "passed": 0,
+          "total": 15,
+          "perRun": [
+            "0/15",
+            "0/0",
+            "0/0"
+          ],
+          "runsWithPass": 0,
+          "failureCategories": {
+            "overlay_blocked": 4,
+            "other": 11,
+            "api_or_syntax_error": 2
+          }
+        }
+      }
+    },
+    "search": {
+      "retrieval": {
+        "top1": "test/cypress/e2e/search.spec.ts",
+        "targetRank": 1,
+        "fixtureRank": 31,
+        "top1IsTarget": true,
+        "expansion": [
+          "test/cypress/support/e2e.ts",
+          "test/cypress/support/commands.ts",
+          "test/cypress/support/setup.ts"
+        ]
+      },
+      "conditions": {
+        "A": {
+          "runs": 3,
+          "passed": 0,
+          "total": 5,
+          "perRun": [
+            "0/2",
+            "0/2",
+            "0/1"
+          ],
+          "runsWithPass": 0,
+          "failureCategories": {
+            "selector_not_found": 5
+          }
+        },
+        "B_auto": {
+          "runs": 3,
+          "passed": 0,
+          "total": 13,
+          "perRun": [
+            "0/7",
+            "0/3",
+            "0/3"
+          ],
+          "runsWithPass": 0,
+          "failureCategories": {
+            "selector_not_found": 6,
+            "api_or_syntax_error": 4,
+            "other": 2,
+            "assertion_failed": 1
+          }
+        },
+        "C_auto": {
+          "runs": 3,
+          "passed": 0,
+          "total": 6,
+          "perRun": [
+            "0/2",
+            "0/2",
+            "0/2"
+          ],
+          "runsWithPass": 0,
+          "failureCategories": {
+            "selector_not_found": 4,
+            "assertion_failed": 1,
+            "api_or_syntax_error": 1
+          }
+        },
+        "B_oracle": {
+          "runs": 3,
+          "passed": 0,
+          "total": 13,
+          "perRun": [
+            "0/7",
+            "0/3",
+            "0/3"
+          ],
+          "runsWithPass": 0,
+          "failureCategories": {
+            "selector_not_found": 6,
+            "api_or_syntax_error": 3,
+            "other": 3,
+            "assertion_failed": 1
+          }
+        },
+        "C_oracle": {
+          "runs": 3,
+          "passed": 0,
+          "total": 8,
+          "perRun": [
+            "0/3",
+            "0/3",
+            "0/2"
+          ],
+          "runsWithPass": 0,
+          "failureCategories": {
+            "selector_not_found": 4,
+            "assertion_failed": 3,
+            "api_or_syntax_error": 1
+          }
+        }
+      }
+    }
+  }
+}

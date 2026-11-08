@@ -1,0 +1,31 @@
+{
+  "story": "search",
+  "condition": "C_oracle",
+  "run": 3,
+  "seed": 3007,
+  "contextFiles": [
+    "test/cypress/e2e/search.spec.ts",
+    "test/cypress/support/setup.ts"
+  ],
+  "promptTokens": 1418,
+  "outputTokens": 215,
+  "genSeconds": 21.201461417,
+  "testsTotal": 2,
+  "testsPassed": 0,
+  "topErrors": [],
+  "tests": [
+    {
+      "title": "search query should return matching products",
+      "status": "failed",
+      "error": "TypeError: products.map is not a function",
+      "category": "api_or_syntax_error"
+    },
+    {
+      "title": "search field must resist reflected cross-site scripting",
+      "status": "failed",
+      "error": "Error: page.waitForSelector: state: expected one of (attached|detached|visible|hidden)",
+      "category": "assertion_failed"
+    }
+  ],
+  "runCategory": null
+}

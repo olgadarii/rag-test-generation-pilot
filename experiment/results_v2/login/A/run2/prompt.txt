@@ -1,0 +1,10 @@
+You are a senior test automation engineer. You write Playwright Test specs in TypeScript. Reply with exactly one TypeScript code block containing a complete, runnable spec file, and nothing else.
+
+Application under test: a web shop. The Playwright config sets baseURL to http://localhost:3000.
+Write a Playwright Test spec file (import { test, expect } from '@playwright/test') for this requirement.
+
+User story: As a customer I want to log in with my email and password so that I can access my account.
+Acceptance criteria:
+- The login page accepts valid credentials and rejects invalid ones.
+- Security regression: the suite verifies each known authentication-bypass vector of the application (SQL injection in the email field, known leaked or weak credentials) and asserts whether the bypass succeeds.
+- Accounts with two-factor authentication enabled require a valid TOTP code after the password step.

@@ -1,0 +1,348 @@
+
+Running 15 tests using 1 worker
+
+[1/15] results_v2/login/B_oracle/run1/gen.spec.ts:9:5 › /#/login › challenge "loginAdminChallenge" › should log in Admin with SQLI attack on email field using "' or 1=1--"
+  1) results_v2/login/B_oracle/run1/gen.spec.ts:9:5 › /#/login › challenge "loginAdminChallenge" › should log in Admin with SQLI attack on email field using "' or 1=1--" 
+
+    TimeoutError: page.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#loginButton')
+        - locator resolved to <button type="submit" color="primary" id="loginButton" aria-label="Login" mat-raised-button="" _ngcontent-ng-c347502026="" mat-ripple-loader-uninitialized="" mat-ripple-loader-class-name="mat-mdc-button-ripple" class="mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        19 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+
+
+      10 |       await page.type('#email', "' or 1=1--");
+      11 |       await page.type('#password', 'a');
+    > 12 |       await page.click('#loginButton');
+         |                  ^
+      13 |     });
+      14 |
+      15 |     test('should log in Admin with SQLI attack on email field using "admin@<juice-sh.op>\'--"', async ({ page }) => {
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_oracle/run1/gen.spec.ts:12:18
+
+    Error Context: test-results/results_v2-login-B_oracle--06cf0-email-field-using-or-1-1---/error-context.md
+
+
+[2/15] results_v2/login/B_oracle/run1/gen.spec.ts:15:5 › /#/login › challenge "loginAdminChallenge" › should log in Admin with SQLI attack on email field using "admin@<juice-sh.op>'--"
+  2) results_v2/login/B_oracle/run1/gen.spec.ts:15:5 › /#/login › challenge "loginAdminChallenge" › should log in Admin with SQLI attack on email field using "admin@<juice-sh.op>'--" 
+
+    Error: page.evaluate: TypeError: Cannot read properties of undefined (reading 'application')
+        at eval (eval at evaluate (:311:30), <anonymous>:2:30)
+        at UtilityScript.evaluate (<anonymous>:313:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at eval (eval at evaluate (:311:30), <anonymous>:2:30)
+        at UtilityScript.evaluate (<anonymous>:313:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_oracle/run1/gen.spec.ts:16:36
+
+    Error Context: test-results/results_v2-login-B_oracle--3b852-using-admin-juice-sh-op----/error-context.md
+
+
+[3/15] results_v2/login/B_oracle/run1/gen.spec.ts:27:5 › /#/login › challenge "loginJimChallenge" › should log in Jim with SQLI attack on email field using "jim@<juice-sh.op>'--"
+  3) results_v2/login/B_oracle/run1/gen.spec.ts:27:5 › /#/login › challenge "loginJimChallenge" › should log in Jim with SQLI attack on email field using "jim@<juice-sh.op>'--" 
+
+    Error: page.evaluate: TypeError: Cannot read properties of undefined (reading 'application')
+        at eval (eval at evaluate (:311:30), <anonymous>:2:30)
+        at UtilityScript.evaluate (<anonymous>:313:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at eval (eval at evaluate (:311:30), <anonymous>:2:30)
+        at UtilityScript.evaluate (<anonymous>:313:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_oracle/run1/gen.spec.ts:28:36
+
+    Error Context: test-results/results_v2-login-B_oracle--4b21f-d-using-jim-juice-sh-op----/error-context.md
+
+
+[4/15] results_v2/login/B_oracle/run1/gen.spec.ts:39:5 › /#/login › challenge "loginBenderChallenge" › should log in Bender with SQLI attack on email field using "bender@<juice-sh.op>'--"
+  4) results_v2/login/B_oracle/run1/gen.spec.ts:39:5 › /#/login › challenge "loginBenderChallenge" › should log in Bender with SQLI attack on email field using "bender@<juice-sh.op>'--" 
+
+    Error: page.evaluate: TypeError: Cannot read properties of undefined (reading 'application')
+        at eval (eval at evaluate (:311:30), <anonymous>:2:30)
+        at UtilityScript.evaluate (<anonymous>:313:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at eval (eval at evaluate (:311:30), <anonymous>:2:30)
+        at UtilityScript.evaluate (<anonymous>:313:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_oracle/run1/gen.spec.ts:40:36
+
+    Error Context: test-results/results_v2-login-B_oracle--f09b0-sing-bender-juice-sh-op----/error-context.md
+
+
+[5/15] results_v2/login/B_oracle/run1/gen.spec.ts:51:5 › /#/login › challenge "weakPasswordChallenge" › should be able to log in with original (weak) admin credentials
+  5) results_v2/login/B_oracle/run1/gen.spec.ts:51:5 › /#/login › challenge "weakPasswordChallenge" › should be able to log in with original (weak) admin credentials 
+
+    Error: page.evaluate: TypeError: Cannot read properties of undefined (reading 'application')
+        at eval (eval at evaluate (:311:30), <anonymous>:2:30)
+        at UtilityScript.evaluate (<anonymous>:313:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at eval (eval at evaluate (:311:30), <anonymous>:2:30)
+        at UtilityScript.evaluate (<anonymous>:313:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_oracle/run1/gen.spec.ts:52:36
+
+    Error Context: test-results/results_v2-login-B_oracle--ebb13-inal-weak-admin-credentials/error-context.md
+
+
+[6/15] results_v2/login/B_oracle/run1/gen.spec.ts:63:5 › /#/login › challenge "loginSupportChallenge" › should be able to log in with original support-team credentials
+  6) results_v2/login/B_oracle/run1/gen.spec.ts:63:5 › /#/login › challenge "loginSupportChallenge" › should be able to log in with original support-team credentials 
+
+    Error: page.evaluate: TypeError: Cannot read properties of undefined (reading 'application')
+        at eval (eval at evaluate (:311:30), <anonymous>:2:30)
+        at UtilityScript.evaluate (<anonymous>:313:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at eval (eval at evaluate (:311:30), <anonymous>:2:30)
+        at UtilityScript.evaluate (<anonymous>:313:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_oracle/run1/gen.spec.ts:64:36
+
+    Error Context: test-results/results_v2-login-B_oracle--a4e54-al-support-team-credentials/error-context.md
+
+
+[7/15] results_v2/login/B_oracle/run1/gen.spec.ts:75:5 › /#/login › challenge "loginRapperChallenge" › should be able to log in with original MC SafeSearch credentials
+  7) results_v2/login/B_oracle/run1/gen.spec.ts:75:5 › /#/login › challenge "loginRapperChallenge" › should be able to log in with original MC SafeSearch credentials 
+
+    Error: page.evaluate: TypeError: Cannot read properties of undefined (reading 'application')
+        at eval (eval at evaluate (:311:30), <anonymous>:2:30)
+        at UtilityScript.evaluate (<anonymous>:313:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at eval (eval at evaluate (:311:30), <anonymous>:2:30)
+        at UtilityScript.evaluate (<anonymous>:313:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_oracle/run1/gen.spec.ts:76:36
+
+    Error Context: test-results/results_v2-login-B_oracle--cabd3-l-MC-SafeSearch-credentials/error-context.md
+
+
+[8/15] results_v2/login/B_oracle/run1/gen.spec.ts:87:5 › /#/login › challenge "loginAmyChallenge" › should be able to log in with original Amy credentials
+  8) results_v2/login/B_oracle/run1/gen.spec.ts:87:5 › /#/login › challenge "loginAmyChallenge" › should be able to log in with original Amy credentials 
+
+    Error: page.evaluate: TypeError: Cannot read properties of undefined (reading 'application')
+        at eval (eval at evaluate (:311:30), <anonymous>:2:30)
+        at UtilityScript.evaluate (<anonymous>:313:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at eval (eval at evaluate (:311:30), <anonymous>:2:30)
+        at UtilityScript.evaluate (<anonymous>:313:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_oracle/run1/gen.spec.ts:88:36
+
+    Error Context: test-results/results_v2-login-B_oracle--53b61-th-original-Amy-credentials/error-context.md
+
+
+[9/15] results_v2/login/B_oracle/run1/gen.spec.ts:99:5 › /#/login › challenge "dlpPasswordSprayingChallenge" › should be able to log in with original Jannik credentials
+  9) results_v2/login/B_oracle/run1/gen.spec.ts:99:5 › /#/login › challenge "dlpPasswordSprayingChallenge" › should be able to log in with original Jannik credentials 
+
+    Error: page.evaluate: TypeError: Cannot read properties of undefined (reading 'application')
+        at eval (eval at evaluate (:311:30), <anonymous>:2:30)
+        at UtilityScript.evaluate (<anonymous>:313:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at eval (eval at evaluate (:311:30), <anonymous>:2:30)
+        at UtilityScript.evaluate (<anonymous>:313:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_oracle/run1/gen.spec.ts:100:36
+
+    Error Context: test-results/results_v2-login-B_oracle--1f306-original-Jannik-credentials/error-context.md
+
+
+[10/15] results_v2/login/B_oracle/run1/gen.spec.ts:111:5 › /#/login › challenge "twoFactorAuthUnsafeSecretStorageChallenge" › should be able to log into a existing 2fa protected account given the right token
+  10) results_v2/login/B_oracle/run1/gen.spec.ts:111:5 › /#/login › challenge "twoFactorAuthUnsafeSecretStorageChallenge" › should be able to log into a existing 2fa protected account given the right token 
+
+    Error: page.evaluate: TypeError: Cannot read properties of undefined (reading 'application')
+        at eval (eval at evaluate (:311:30), <anonymous>:2:30)
+        at UtilityScript.evaluate (<anonymous>:313:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at eval (eval at evaluate (:311:30), <anonymous>:2:30)
+        at UtilityScript.evaluate (<anonymous>:313:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_oracle/run1/gen.spec.ts:112:36
+
+    Error Context: test-results/results_v2-login-B_oracle--c73f1-count-given-the-right-token/error-context.md
+
+
+[11/15] results_v2/login/B_oracle/run1/gen.spec.ts:130:5 › /#/login › challenge "oauthUserPasswordChallenge" › should be able to log in as bjoern.kimminich@gmail.com with base64-encoded email as password
+  11) results_v2/login/B_oracle/run1/gen.spec.ts:130:5 › /#/login › challenge "oauthUserPasswordChallenge" › should be able to log in as bjoern.kimminich@gmail.com with base64-encoded email as password 
+
+    TimeoutError: page.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#loginButton')
+        - locator resolved to <button type="submit" color="primary" id="loginButton" aria-label="Login" mat-raised-button="" _ngcontent-ng-c347502026="" mat-ripple-loader-uninitialized="" mat-ripple-loader-class-name="mat-mdc-button-ripple" class="mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        19 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+
+
+      131 |       await page.type('#email', 'bjoern.kimminich@gmail.com');
+      132 |       await page.type('#password', 'bW9jLmxpYW1nQGhjaW5pbW1pay5ucmVvamI=');
+    > 133 |       await page.click('#loginButton');
+          |                  ^
+      134 |
+      135 |       await expect(page).toHaveURL(/\/challenge-solved\/LoginBjoern/);
+      136 |     });
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_oracle/run1/gen.spec.ts:133:18
+
+    Error Context: test-results/results_v2-login-B_oracle--f57c6-4-encoded-email-as-password/error-context.md
+
+
+[12/15] results_v2/login/B_oracle/run1/gen.spec.ts:140:5 › /#/login › challenge "ghostLoginChallenge" › should be able to log in as chris.pike@juice-sh.op by using "' or deletedAt IS NOT NULL --"
+  12) results_v2/login/B_oracle/run1/gen.spec.ts:140:5 › /#/login › challenge "ghostLoginChallenge" › should be able to log in as chris.pike@juice-sh.op by using "' or deletedAt IS NOT NULL --" 
+
+    TimeoutError: page.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#loginButton')
+        - locator resolved to <button type="submit" color="primary" id="loginButton" aria-label="Login" mat-raised-button="" _ngcontent-ng-c347502026="" mat-ripple-loader-uninitialized="" mat-ripple-loader-class-name="mat-mdc-button-ripple" class="mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        19 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <a target="_blank" href="https://owasp-juice.shop">https://owasp-juice.shop</a> from <div class="cdk-overlay-container">…</div> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+
+
+      141 |       await page.type('#email', "' or deletedAt IS NOT NULL--");
+      142 |       await page.type('#password', 'a');
+    > 143 |       await page.click('#loginButton');
+          |                  ^
+      144 |     });
+      145 |
+      146 |     test('should be able to log in as chris.pike@juice-sh.op by using "chris.pike@juice-sh.op\' --"', async ({ page }) => {
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_oracle/run1/gen.spec.ts:143:18
+
+    Error Context: test-results/results_v2-login-B_oracle--de546-r-deletedAt-IS-NOT-NULL----/error-context.md
+
+
+[13/15] results_v2/login/B_oracle/run1/gen.spec.ts:146:5 › /#/login › challenge "ghostLoginChallenge" › should be able to log in as chris.pike@juice-sh.op by using "chris.pike@juice-sh.op' --"
+  13) results_v2/login/B_oracle/run1/gen.spec.ts:146:5 › /#/login › challenge "ghostLoginChallenge" › should be able to log in as chris.pike@juice-sh.op by using "chris.pike@juice-sh.op' --" 
+
+    Error: page.evaluate: TypeError: Cannot read properties of undefined (reading 'application')
+        at eval (eval at evaluate (:311:30), <anonymous>:2:30)
+        at UtilityScript.evaluate (<anonymous>:313:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at eval (eval at evaluate (:311:30), <anonymous>:2:30)
+        at UtilityScript.evaluate (<anonymous>:313:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_oracle/run1/gen.spec.ts:147:36
+
+    Error Context: test-results/results_v2-login-B_oracle--eb145--chris-pike-juice-sh-op----/error-context.md
+
+
+[14/15] results_v2/login/B_oracle/run1/gen.spec.ts:160:5 › /#/login › challenge "ephemeralAccountant" › should log in non-existing accountant user with SQLI attack on email field using UNION SELECT payload
+  14) results_v2/login/B_oracle/run1/gen.spec.ts:160:5 › /#/login › challenge "ephemeralAccountant" › should log in non-existing accountant user with SQLI attack on email field using UNION SELECT payload 
+
+    TimeoutError: page.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('#loginButton')
+        - locator resolved to <button type="submit" color="primary" disabled="true" id="loginButton" aria-label="Login" mat-raised-button="" _ngcontent-ng-c347502026="" mat-ripple-loader-disabled="" mat-ripple-loader-uninitialized="" mat-ripple-loader-class-name="mat-mdc-button-ripple" class="mdc-button mat-mdc-button-base mdc-button--raised mat-mdc-raised-button mat-primary mat-mdc-button-disabled">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is not enabled
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is not enabled
+        - retrying click action
+          - waiting 100ms
+        19 × waiting for element to be visible, enabled and stable
+           - element is not enabled
+         - retrying click action
+           - waiting 500ms
+
+
+      163 |       );
+      164 |       await page.type('#password', 'a');
+    > 165 |       await page.click('#loginButton');
+          |                  ^
+      166 |
+      167 |       await expect(page).toHaveURL(/\/challenge-solved\/EphemeralAccountant/);
+      168 |     });
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_oracle/run1/gen.spec.ts:165:18
+
+    Error Context: test-results/results_v2-login-B_oracle--4d021--using-UNION-SELECT-payload/error-context.md
+
+
+[15/15] results_v2/login/B_oracle/run1/gen.spec.ts:172:5 › /#/login › challenge "exposedCredentialsChallenge" › should be able to log in with testing credentials that are leaked on client
+  15) results_v2/login/B_oracle/run1/gen.spec.ts:172:5 › /#/login › challenge "exposedCredentialsChallenge" › should be able to log in with testing credentials that are leaked on client 
+
+    Error: page.evaluate: TypeError: Cannot read properties of undefined (reading 'application')
+        at eval (eval at evaluate (:311:30), <anonymous>:2:30)
+        at UtilityScript.evaluate (<anonymous>:313:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at eval (eval at evaluate (:311:30), <anonymous>:2:30)
+        at UtilityScript.evaluate (<anonymous>:313:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at /Users/olgadarii/Documents/Doctorat/rag-test-generation-pilot/experiment/results_v2/login/B_oracle/run1/gen.spec.ts:173:36
+
+    Error Context: test-results/results_v2-login-B_oracle--bd20a-s-that-are-leaked-on-client/error-context.md
+
+
+  15 failed
+    results_v2/login/B_oracle/run1/gen.spec.ts:9:5 › /#/login › challenge "loginAdminChallenge" › should log in Admin with SQLI attack on email field using "' or 1=1--" 
+    results_v2/login/B_oracle/run1/gen.spec.ts:15:5 › /#/login › challenge "loginAdminChallenge" › should log in Admin with SQLI attack on email field using "admin@<juice-sh.op>'--" 
+    results_v2/login/B_oracle/run1/gen.spec.ts:27:5 › /#/login › challenge "loginJimChallenge" › should log in Jim with SQLI attack on email field using "jim@<juice-sh.op>'--" 
+    results_v2/login/B_oracle/run1/gen.spec.ts:39:5 › /#/login › challenge "loginBenderChallenge" › should log in Bender with SQLI attack on email field using "bender@<juice-sh.op>'--" 
+    results_v2/login/B_oracle/run1/gen.spec.ts:51:5 › /#/login › challenge "weakPasswordChallenge" › should be able to log in with original (weak) admin credentials 
+    results_v2/login/B_oracle/run1/gen.spec.ts:63:5 › /#/login › challenge "loginSupportChallenge" › should be able to log in with original support-team credentials 
+    results_v2/login/B_oracle/run1/gen.spec.ts:75:5 › /#/login › challenge "loginRapperChallenge" › should be able to log in with original MC SafeSearch credentials 
+    results_v2/login/B_oracle/run1/gen.spec.ts:87:5 › /#/login › challenge "loginAmyChallenge" › should be able to log in with original Amy credentials 
+    results_v2/login/B_oracle/run1/gen.spec.ts:99:5 › /#/login › challenge "dlpPasswordSprayingChallenge" › should be able to log in with original Jannik credentials 
+    results_v2/login/B_oracle/run1/gen.spec.ts:111:5 › /#/login › challenge "twoFactorAuthUnsafeSecretStorageChallenge" › should be able to log into a existing 2fa protected account given the right token 
+    results_v2/login/B_oracle/run1/gen.spec.ts:130:5 › /#/login › challenge "oauthUserPasswordChallenge" › should be able to log in as bjoern.kimminich@gmail.com with base64-encoded email as password 
+    results_v2/login/B_oracle/run1/gen.spec.ts:140:5 › /#/login › challenge "ghostLoginChallenge" › should be able to log in as chris.pike@juice-sh.op by using "' or deletedAt IS NOT NULL --" 
+    results_v2/login/B_oracle/run1/gen.spec.ts:146:5 › /#/login › challenge "ghostLoginChallenge" › should be able to log in as chris.pike@juice-sh.op by using "chris.pike@juice-sh.op' --" 
+    results_v2/login/B_oracle/run1/gen.spec.ts:160:5 › /#/login › challenge "ephemeralAccountant" › should log in non-existing accountant user with SQLI attack on email field using UNION SELECT payload 
+    results_v2/login/B_oracle/run1/gen.spec.ts:172:5 › /#/login › challenge "exposedCredentialsChallenge" › should be able to log in with testing credentials that are leaked on client 
+

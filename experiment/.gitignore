@@ -1,0 +1,8 @@
+tools/
+juice-src/
+juice-app.path
+juice-node.path
+juice.pid
+.package.zip
+# first attempt, invalidated (Juice Shop restart race); kept locally only
+results/
